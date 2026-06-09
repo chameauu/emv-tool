@@ -44,8 +44,9 @@ A JavaScript library for parsing, decoding, and serializing EMV TLV (Tag-Length-
 
 ```bash
 # Clone the repository
-git clone https://github.com/lumag/emv-tools.git
-cd emv-tools/stage
+git clone https://github.com/chameauu/emv-tool.git
+
+cd emv-tool
 
 # Install dev dependencies (Jest)
 npm install
