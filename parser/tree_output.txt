@@ -1,21 +1,5 @@
 +--+ E0 (ZKA_TM_TERMINAL_CONFIG_DATA_TEMPLATE, len=0xA2) value="9F1A020280DF1B020978DF1C01029F3501229F330360F8C8DF490280009F40056000F0F000DF47020101DF390ADF020F95059B029F3403DF7106030000000000F160DF010102DF040100F209DF020200BCDF030101F209DF02020000DF030102F209DF02020015DF030103F209DF0202009EDF030103F209DF02020001DF030104F209DF02020003DF030104F209DF02020005DF030105F209DF020200A8DF030100"
 
-  +--+ Byte 1 (9F)
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Cash
-
-  +--+ Byte 2 (1A)
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Enciphered PIN for offline verification
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> No CVM required
-
-  +--+ Byte 3 (02)
-
-  +--+ Byte 4 (02)
-
   +--+ 9F1A (EMVCO_TERMINAL_COUNTRY_CODE, len=0x02) value="0280"
 
   +--+ DF1B (ZKA_TM_TERMINAL_CURRENCY, len=0x02) value="0978"
@@ -28,29 +12,29 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
     +--+ Byte 2 (F8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Plaintext PIN for ICC verification
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Plaintext PIN for ICC verification
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Signature (paper)
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Signature (paper)
 
-    |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Enciphered PIN for offline verification
+    |  +--+  Bit 5 (Mask 0x10, value 0x10) --> Enciphered PIN for offline verification
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> No CVM required
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> No CVM required
 
     +--+ Byte 3 (C8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> SDA
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> SDA
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
   +--+ DF49 (Specific Terminal Capabilities, len=0x02) value="8000"
 
@@ -58,29 +42,29 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Goods
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Services
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Services
 
     +--+ Byte 3 (F0)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Numeric keys
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Numeric keys
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Alphabetic and special characters keys
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Alphabetic and special characters keys
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Command keys
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Command keys
 
-    |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Function keys
+    |  +--+  Bit 5 (Mask 0x10, value 0x10) --> Function keys
 
     +--+ Byte 4 (F0)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Print, attendant
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Print, attendant
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Print, cardholder
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Print, cardholder
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Display, attendant
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Display, attendant
 
-    |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Display, cardholder
+    |  +--+  Bit 5 (Mask 0x10, value 0x10) --> Display, cardholder
 
     +--+ Byte 5 (00)
 
@@ -272,48 +256,6 @@
 
 +--+ E2 (ZKA_TM_APPLICATION_CONFIG_DATA_TEMPLATE, len=0x17B) value="9F0606A00000002501DF0A10416D65726963616E2045787072657373DF0B0101F805DF06020002DF2A0123DF0C039F37049F090200019F15027011DF60020002DF270320F0C8DF11050000000000DF22082123110000000000DF280260009F4E2842535061796F6E6520476D62482020202020202020202020204672616E6B6675727420616D2044459F160F393530353630323235302020202020DF2606000000000000DF2F0101DF1205CC00FC8000DF1305CC00FC8000DF250422000000DF7F0101FB5EDF010104DF07028600DF0406000099999999DF0506000000000000DF0606000000005001DF11050010000000DF1205DE00FC9800DF1305DC50FC9800DF2703E068089F6E049CE000039F6D01C0DF1702C800DF4B028E20DF4C04E0E00000FB56DF010104DF07021900DF0406000099999999DF0506000000000000DF0606000099999999DF11050010000000DF1205DE00FC9800DF1305DC50FC9800DF380100DF2703E020C89F6E04188000009F6D01C0DF1702C800"
 
-  +--+ Byte 1 (9F)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
-
-  |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
-
-  |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  +--+ Byte 2 (06)
-
-  +--+ Byte 3 (06)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
-
-  +--+ Byte 4 (A0)
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
-
   +--+ 9F06 (EMVCO_AID, len=0x06) value="A00000002501"
 
   +--+ DF0A (ZKA_TM_APPLICATION_LABEL, len=0x10) value="416D65726963616E2045787072657373"
@@ -328,9 +270,9 @@
 
     +--+ Byte 1 (23)
 
-    |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
+    |  +--+  Bit 2 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Print product name on the receipt
 
   +--+ DF0C (ZKA_TM_DEFAULT_DDOL, len=0x03) value="9F3704"
 
@@ -344,19 +286,19 @@
 
     +--+ Byte 1 (20)
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
     +--+ Byte 2 (F0)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
     +--+ Byte 3 (C8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> SDA
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> SDA
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
   +--+ DF11 (ZKA_TM_TAC_DENIAL, len=0x05) value="0000000000"
 
@@ -370,9 +312,9 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Goods
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Services
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Services
 
     +--+ Byte 2 (00)
 
@@ -388,31 +330,31 @@
 
     +--+ Byte 1 (CC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
     +--+ Byte 3 (FC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> CV failed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> CV failed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Unrecognised CVM
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Unrecognised CVM
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> PIN try limit exceeded
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> PIN try limit exceeded
 
-    |  +--+  Bit 0 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
+    |  +--+  Bit 5 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
     +--+ Byte 4 (80)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -420,31 +362,31 @@
 
     +--+ Byte 1 (CC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
     +--+ Byte 3 (FC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> CV failed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> CV failed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Unrecognised CVM
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Unrecognised CVM
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> PIN try limit exceeded
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> PIN try limit exceeded
 
-    |  +--+  Bit 0 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
+    |  +--+  Bit 5 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
     +--+ Byte 4 (80)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -460,11 +402,11 @@
 
       +--+ Byte 1 (86)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> initial reservation
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> initial reservation
 
-      |  +--+  Bit 0 (Mask 0x02, value 0x02) --> reservation increase
+      |  +--+  Bit 2 (Mask 0x02, value 0x02) --> reservation increase
 
     +--+ DF04 (ZKA_TM_CONFIGURATION_ACTION_CONTROL, len=0x06) value="000099999999"
 
@@ -478,37 +420,37 @@
 
       +--+ Byte 2 (10)
 
-      |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Requested service not allowed
+      |  +--+  Bit 5 (Mask 0x10, value 0x10) --> Requested service not allowed
 
     +--+ DF12 (ZKA_TM_TAC_ONLINE, len=0x05) value="DE00FC9800"
 
       +--+ Byte 1 (DE)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
       +--+ Byte 3 (FC)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> CV failed
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> CV failed
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Unrecognised CVM
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Unrecognised CVM
 
-      |  +--+  Bit 0 (Mask 0x20, value 0x20) --> PIN try limit exceeded
+      |  +--+  Bit 6 (Mask 0x20, value 0x20) --> PIN try limit exceeded
 
-      |  +--+  Bit 0 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
+      |  +--+  Bit 5 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
       +--+ Byte 4 (98)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
       +--+ Byte 5 (00)
 
@@ -516,31 +458,31 @@
 
       +--+ Byte 1 (DC)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
       +--+ Byte 3 (FC)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> CV failed
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> CV failed
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Unrecognised CVM
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Unrecognised CVM
 
-      |  +--+  Bit 0 (Mask 0x20, value 0x20) --> PIN try limit exceeded
+      |  +--+  Bit 6 (Mask 0x20, value 0x20) --> PIN try limit exceeded
 
-      |  +--+  Bit 0 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
+      |  +--+  Bit 5 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
       +--+ Byte 4 (98)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
       +--+ Byte 5 (00)
 
@@ -548,19 +490,19 @@
 
       +--+ Byte 1 (E0)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Manual key entry
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
-      |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+      |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
       +--+ Byte 2 (68)
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
       +--+ Byte 3 (08)
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
     +--+ 9F6E (Enhanced Contactless Reader Capabilities, len=0x04) value="9CE00003"
 
@@ -592,37 +534,37 @@
 
       +--+ Byte 2 (10)
 
-      |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Requested service not allowed
+      |  +--+  Bit 5 (Mask 0x10, value 0x10) --> Requested service not allowed
 
     +--+ DF12 (ZKA_TM_TAC_ONLINE, len=0x05) value="DE00FC9800"
 
       +--+ Byte 1 (DE)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
       +--+ Byte 3 (FC)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> CV failed
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> CV failed
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Unrecognised CVM
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Unrecognised CVM
 
-      |  +--+  Bit 0 (Mask 0x20, value 0x20) --> PIN try limit exceeded
+      |  +--+  Bit 6 (Mask 0x20, value 0x20) --> PIN try limit exceeded
 
-      |  +--+  Bit 0 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
+      |  +--+  Bit 5 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
       +--+ Byte 4 (98)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
       +--+ Byte 5 (00)
 
@@ -630,31 +572,31 @@
 
       +--+ Byte 1 (DC)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
       +--+ Byte 3 (FC)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> CV failed
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> CV failed
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Unrecognised CVM
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Unrecognised CVM
 
-      |  +--+  Bit 0 (Mask 0x20, value 0x20) --> PIN try limit exceeded
+      |  +--+  Bit 6 (Mask 0x20, value 0x20) --> PIN try limit exceeded
 
-      |  +--+  Bit 0 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
+      |  +--+  Bit 5 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
       +--+ Byte 4 (98)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
       +--+ Byte 5 (00)
 
@@ -664,21 +606,21 @@
 
       +--+ Byte 1 (E0)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Manual key entry
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
-      |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+      |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
       +--+ Byte 2 (20)
 
       +--+ Byte 3 (C8)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> SDA
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> SDA
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
     +--+ 9F6E (Enhanced Contactless Reader Capabilities, len=0x04) value="18800000"
 
@@ -687,48 +629,6 @@
     +--+ DF17 (Kernel 4-Capabilities, len=0x02) value="C800"
 
 +--+ E2 (ZKA_TM_APPLICATION_CONFIG_DATA_TEMPLATE, len=0x6F) value="DF06020002DF60020002DF0A10416D65726963616E2045787072657373DF2703C0F0C8DF22082123110000000000DF28026000DF2A0103DF250422000000DF1406000000000000DF460102DF150F393530353630323235302020202020DF180101F10CF904DF2C0134F904DF2C0137"
-
-  +--+ Byte 1 (DF)
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Don't evaluate the PAN
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
-
-  |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
-
-  |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  +--+ Byte 2 (06)
-
-  +--+ Byte 3 (02)
-
-  +--+ Byte 4 (00)
 
   +--+ DF06 (ZKA_TM_MID, len=0x02) value="0002"
 
@@ -740,21 +640,21 @@
 
     +--+ Byte 1 (C0)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Manual key entry
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
     +--+ Byte 2 (F0)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
     +--+ Byte 3 (C8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> SDA
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> SDA
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
   +--+ DF22 (ZKA_TM_TRANSACTION_RESTRICTIONS, len=0x08) value="2123110000000000"
 
@@ -762,9 +662,9 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Goods
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Services
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Services
 
     +--+ Byte 2 (00)
 
@@ -772,9 +672,9 @@
 
     +--+ Byte 1 (03)
 
-    |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
+    |  +--+  Bit 2 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Print product name on the receipt
 
   +--+ DF25 (ZKA_TM_TICKET_PARAMETER, len=0x04) value="22000000"
 
@@ -788,7 +688,7 @@
 
     +--+ Byte 1 (01)
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Fallback allowed, denied if application or chip blocked
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Fallback allowed, denied if application or chip blocked
 
   +--+ F1 (ZKA_TM_IDENTIFYING_MAG_STRIPE_DATA, len=0x0C) value="F904DF2C0134F904DF2C0137"
 
@@ -802,52 +702,6 @@
 
 +--+ E2 (ZKA_TM_APPLICATION_CONFIG_DATA_TEMPLATE, len=0x89) value="9F0607D2760001317002DF0A0D4156532047757473636865696EDF22082100000000000000DF2703C02000DF2A0103DF600200D0DF7106010600000000DF850D080011110000000000FB2FDF0103D10001DF0406000099999999DF0702FFFFDF090100DF2703C02000DF2A0103DF7A0A6B6F6E74616B746C6F739F0607D2760001317002DF600200D0"
 
-  +--+ Byte 1 (9F)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
-
-  |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
-
-  |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  +--+ Byte 2 (06)
-
-  +--+ Byte 3 (07)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
-
-  +--+ Byte 4 (D2)
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> LCOL exceeded
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Random online
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> LCOL exceeded
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Random online
-
   +--+ 9F06 (EMVCO_AID, len=0x07) value="D2760001317002"
 
   +--+ DF0A (ZKA_TM_APPLICATION_LABEL, len=0x0D) value="4156532047757473636865696E"
@@ -858,9 +712,9 @@
 
     +--+ Byte 1 (C0)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Manual key entry
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
     +--+ Byte 2 (20)
 
@@ -870,9 +724,9 @@
 
     +--+ Byte 1 (03)
 
-    |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
+    |  +--+  Bit 2 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Print product name on the receipt
 
   +--+ DF60 (POSEIDON_EMV_CARD_ID, len=0x02) value="00D0"
 
@@ -890,11 +744,11 @@
 
       +--+ Byte 1 (FF)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> initial reservation
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> initial reservation
 
-      |  +--+  Bit 0 (Mask 0x02, value 0x02) --> reservation increase
+      |  +--+  Bit 2 (Mask 0x02, value 0x02) --> reservation increase
 
     +--+ DF09 (ZKA_TM_KERNEL_PRIORITY, len=0x01) value="00"
 
@@ -902,9 +756,9 @@
 
       +--+ Byte 1 (C0)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Manual key entry
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
       +--+ Byte 2 (20)
 
@@ -914,9 +768,9 @@
 
       +--+ Byte 1 (03)
 
-      |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
+      |  +--+  Bit 2 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
 
-      |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
+      |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Print product name on the receipt
 
     +--+ DF7A (len=0x0A) value="6B6F6E74616B746C6F73"
 
@@ -925,48 +779,6 @@
   +--+ DF60 (POSEIDON_EMV_CARD_ID, len=0x02) value="00D0"
 
 +--+ E2 (ZKA_TM_APPLICATION_CONFIG_DATA_TEMPLATE, len=0x153) value="9F0607A0000001523010DF60020004DF0A0B44696E65727320436C7562DF0B0101F805DF06020004DF2A0123DF0C039F3704DF0D0F9F02065F2A029A039C0195059F37049F090200019F15027011DF280260009F5301529F4E2842535061796F6E6520476D62482020202020202020202020204672616E6B6675727420616D2044459F160F343535363030343138323030202020DF2606000000000000DF23020000DF2F0101DF270320F0C8DF11050000000000DF22082123110001000000DF1205F850ACF800DF1305FC50ACF800DF19018EDF250422000000DF7F0101FB3ADF010106DF07028600DF0606000000005001DF020100DF030100DF0406000099999999DF05060000000000009F6604B660C000DF4C04A0600000FB37DF010106DF07021900DF020100DF030100DF0406999999999999DF0506000000000000DF06069999999999999F6604B0800000DF380100"
-
-  +--+ Byte 1 (9F)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
-
-  |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
-
-  |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  +--+ Byte 2 (06)
-
-  +--+ Byte 3 (07)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
-
-  +--+ Byte 4 (A0)
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
 
   +--+ 9F06 (EMVCO_AID, len=0x07) value="A0000001523010"
 
@@ -984,9 +796,9 @@
 
     +--+ Byte 1 (23)
 
-    |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
+    |  +--+  Bit 2 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Print product name on the receipt
 
   +--+ DF0C (ZKA_TM_DEFAULT_DDOL, len=0x03) value="9F3704"
 
@@ -1000,9 +812,9 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Goods
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Services
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Services
 
     +--+ Byte 2 (00)
 
@@ -1022,19 +834,19 @@
 
     +--+ Byte 1 (20)
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
     +--+ Byte 2 (F0)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
     +--+ Byte 3 (C8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> SDA
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> SDA
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
   +--+ DF11 (ZKA_TM_TAC_DENIAL, len=0x05) value="0000000000"
 
@@ -1048,25 +860,25 @@
 
     +--+ Byte 1 (F8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
     +--+ Byte 3 (AC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> CV failed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> CV failed
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> PIN try limit exceeded
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> PIN try limit exceeded
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
     +--+ Byte 4 (F8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -1074,27 +886,27 @@
 
     +--+ Byte 1 (FC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
     +--+ Byte 3 (AC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> CV failed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> CV failed
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> PIN try limit exceeded
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> PIN try limit exceeded
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
     +--+ Byte 4 (F8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -1112,11 +924,11 @@
 
       +--+ Byte 1 (86)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> initial reservation
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> initial reservation
 
-      |  +--+  Bit 0 (Mask 0x02, value 0x02) --> reservation increase
+      |  +--+  Bit 2 (Mask 0x02, value 0x02) --> reservation increase
 
     +--+ DF06 (ZKA_TM_MID, len=0x06) value="000000005001"
 
@@ -1156,48 +968,6 @@
 
 +--+ E2 (ZKA_TM_APPLICATION_CONFIG_DATA_TEMPLATE, len=0x9B) value="DF06020004DF60020004DF0A0B44696E65727320436C7562DF1406000000000000DF150F343535363030343138323030202020DF460102DF180104DF2703C0F0C8DF22082100110000000000DF28026000DF2A0107DF250422000000F13DF904DF2C0136F904DF2C0165F905DF2C02644FF905DF2C02645FF905DF2C02646FF905DF2C02647FF905DF2C02648FF905DF2C02649FF905DF2C026011"
 
-  +--+ Byte 1 (DF)
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Don't evaluate the PAN
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
-
-  |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
-
-  |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  +--+ Byte 2 (06)
-
-  +--+ Byte 3 (02)
-
-  +--+ Byte 4 (00)
-
   +--+ DF06 (ZKA_TM_MID, len=0x02) value="0004"
 
   +--+ DF60 (POSEIDON_EMV_CARD_ID, len=0x02) value="0004"
@@ -1218,21 +988,21 @@
 
     +--+ Byte 1 (C0)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Manual key entry
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
     +--+ Byte 2 (F0)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
     +--+ Byte 3 (C8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> SDA
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> SDA
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
   +--+ DF22 (ZKA_TM_TRANSACTION_RESTRICTIONS, len=0x08) value="2100110000000000"
 
@@ -1240,9 +1010,9 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Goods
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Services
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Services
 
     +--+ Byte 2 (00)
 
@@ -1250,11 +1020,11 @@
 
     +--+ Byte 1 (07)
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
 
-    |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
+    |  +--+  Bit 2 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Print product name on the receipt
 
   +--+ DF25 (ZKA_TM_TICKET_PARAMETER, len=0x04) value="22000000"
 
@@ -1298,48 +1068,6 @@
 
 +--+ E2 (ZKA_TM_APPLICATION_CONFIG_DATA_TEMPLATE, len=0x20A) value="9F060AA0000003591010028001DF60020000F805DF06020000DF2A0123DF0A086769726F63617264DF0B0101DF0C039F37049F090200029F150270119F5301529F4E1B42535061796F6E6520476D62483E4672616E6B66757274206144459F160F4531393837303335303020202020209F0103000600DF2606000000000000DF23020000DF2F0101DF1205FC50ACF800DF1305FC50ACA000DF19048E575F34DF35020280DF420FDF020F95059B028A019F340ADF010FDF2703605048DF11050000000000DF22082003000100001000DF28026000DF250422100000DF7F0101FB8199DF01012ADF07028000DF090101DF0606000000005001DF0801019F1D08CD50800000000000DF1205FC50BCF80CDF1305FC50BCA00CDF2703204808DF81180140DF81190148DF811A039F6A04DF811B01B0DF811C020000DF811D0100DF813402000CDF813502000FDF81360200C8DF813A058400800000DF1406000099999999DF1506000099999999DF1606000000005001DF4C0480280000FB818CDF01012ADF07020800DF090101DF0606000099999999DF0801019F1D088000800000000000DF1105FFFFFFFFFFDF12050000000000DF13050000000000DF380120DF2606000000000000DF2703200808DF81180100DF81190108DF811A039F6A04DF811B01B0DF811C02012CDF811D0103DF813A058400800000DF1406000099999999DF1506000099999999"
 
-  +--+ Byte 1 (9F)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
-
-  |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
-
-  |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  +--+ Byte 2 (06)
-
-  +--+ Byte 3 (0A)
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
-
-  +--+ Byte 4 (A0)
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
-
   +--+ 9F06 (EMVCO_AID, len=0x0A) value="A0000003591010028001"
 
   +--+ DF60 (POSEIDON_EMV_CARD_ID, len=0x02) value="0000"
@@ -1352,9 +1080,9 @@
 
     +--+ Byte 1 (23)
 
-    |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
+    |  +--+  Bit 2 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Print product name on the receipt
 
   +--+ DF0A (ZKA_TM_APPLICATION_LABEL, len=0x08) value="6769726F63617264"
 
@@ -1384,27 +1112,27 @@
 
     +--+ Byte 1 (FC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
     +--+ Byte 3 (AC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> CV failed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> CV failed
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> PIN try limit exceeded
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> PIN try limit exceeded
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
     +--+ Byte 4 (F8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -1412,27 +1140,27 @@
 
     +--+ Byte 1 (FC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
     +--+ Byte 3 (AC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> CV failed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> CV failed
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> PIN try limit exceeded
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> PIN try limit exceeded
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
     +--+ Byte 4 (A0)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -1446,19 +1174,19 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
     +--+ Byte 2 (50)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
     +--+ Byte 3 (48)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
   +--+ DF11 (ZKA_TM_TAC_DENIAL, len=0x05) value="0000000000"
 
@@ -1472,9 +1200,9 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Goods
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Services
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Services
 
     +--+ Byte 2 (00)
 
@@ -1490,7 +1218,7 @@
 
       +--+ Byte 1 (80)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
 
     +--+ DF09 (ZKA_TM_KERNEL_PRIORITY, len=0x01) value="01"
 
@@ -1504,29 +1232,29 @@
 
       +--+ Byte 1 (FC)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
       +--+ Byte 3 (BC)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> CV failed
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> CV failed
 
-      |  +--+  Bit 0 (Mask 0x20, value 0x20) --> PIN try limit exceeded
+      |  +--+  Bit 6 (Mask 0x20, value 0x20) --> PIN try limit exceeded
 
-      |  +--+  Bit 0 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
+      |  +--+  Bit 5 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
       +--+ Byte 4 (F8)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
       +--+ Byte 5 (0C)
 
@@ -1536,29 +1264,29 @@
 
       +--+ Byte 1 (FC)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
       +--+ Byte 3 (BC)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> CV failed
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> CV failed
 
-      |  +--+  Bit 0 (Mask 0x20, value 0x20) --> PIN try limit exceeded
+      |  +--+  Bit 6 (Mask 0x20, value 0x20) --> PIN try limit exceeded
 
-      |  +--+  Bit 0 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
+      |  +--+  Bit 5 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
       +--+ Byte 4 (A0)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
       +--+ Byte 5 (0C)
 
@@ -1568,15 +1296,15 @@
 
       +--+ Byte 1 (20)
 
-      |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+      |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
       +--+ Byte 2 (48)
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
       +--+ Byte 3 (08)
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
     +--+ DF8118 (CVM Required, len=0x01) value="40"
 
@@ -1626,11 +1354,11 @@
 
       +--+ Byte 1 (FF)
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
       +--+ Byte 2 (FF)
 
-      |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Requested service not allowed
+      |  +--+  Bit 5 (Mask 0x10, value 0x10) --> Requested service not allowed
 
     +--+ DF12 (ZKA_TM_TAC_ONLINE, len=0x05) value="0000000000"
 
@@ -1660,13 +1388,13 @@
 
       +--+ Byte 1 (20)
 
-      |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+      |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
       +--+ Byte 2 (08)
 
       +--+ Byte 3 (08)
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
     +--+ DF8118 (CVM Required, len=0x01) value="00"
 
@@ -1688,48 +1416,6 @@
 
 +--+ E2 (ZKA_TM_APPLICATION_CONFIG_DATA_TEMPLATE, len=0x2BD) value="DF06020000DF60020000DF0A086769726F63617264DF1406000000000000DF150F453139383730333530302020202020DF2A0103DF2703604048DF22082030000000000000DF250422000000DF28026000DF460102DF7106030000000000DF180100F1820257F905DF2C02672FF905DF2C02680FF905DF2C024711F905DF2C024822F905DF2C024825F906DF2C03458612F906DF2C03458613F906DF2C03458620F906DF2C03458621F906DF2C03458622F906DF2C03458623F906DF2C03458624F906DF2C03458625F906DF2C03458626F906DF2C03458630F906DF2C03458632F906DF2C03458650F906DF2C03458651F906DF2C03458652F906DF2C03458653F906DF2C03458654F906DF2C03458655F906DF2C03458656F906DF2C03458660F906DF2C03458661F906DF2C03458662F906DF2C03458663F906DF2C03458664F906DF2C03458665F906DF2C03458666F906DF2C03458670F906DF2C03458671F906DF2C03458672F906DF2C03458673F906DF2C03458674F906DF2C03458675F906DF2C03458676F906DF2C03458677F906DF2C03458678F906DF2C03458679F906DF2C03458680F906DF2C03458681F906DF2C03458685F906DF2C03458686F906DF2C03466630F906DF2C03466631F906DF2C03466632F906DF2C03466640F906DF2C03466641F906DF2C03466642F906DF2C03466643F906DF2C03466650F906DF2C03466651F906DF2C03466652F906DF2C03466653F906DF2C03466654F906DF2C03466655F906DF2C03458910F906DF2C03458920F906DF2C03458921F906DF2C03458940F906DF2C03458950F906DF2C03458951F906DF2C03458952F906DF2C03458960F906DF2C03458961F906DF2C03458970F906DF2C03458971F906DF2C03458980F906DF2C03466920F906DF2C03466921F906DF2C03466940F906DF2C03466950F906DF2C03466951F906DF2C034669905F340106"
 
-  +--+ Byte 1 (DF)
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Don't evaluate the PAN
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
-
-  |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
-
-  |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  +--+ Byte 2 (06)
-
-  +--+ Byte 3 (02)
-
-  +--+ Byte 4 (00)
-
   +--+ DF06 (ZKA_TM_MID, len=0x02) value="0000"
 
   +--+ DF60 (POSEIDON_EMV_CARD_ID, len=0x02) value="0000"
@@ -1744,27 +1430,27 @@
 
     +--+ Byte 1 (03)
 
-    |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
+    |  +--+  Bit 2 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Print product name on the receipt
 
   +--+ DF27 (ZKA_TM_RESTRICTED_TERMINAL_CAPABILITIES, len=0x03) value="604048"
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
     +--+ Byte 2 (40)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
     +--+ Byte 3 (48)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
   +--+ DF22 (ZKA_TM_TRANSACTION_RESTRICTIONS, len=0x08) value="2030000000000000"
 
@@ -1774,9 +1460,9 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Goods
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Services
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Services
 
     +--+ Byte 2 (00)
 
@@ -2094,48 +1780,6 @@
 
 +--+ E2 (ZKA_TM_APPLICATION_CONFIG_DATA_TEMPLATE, len=0x146) value="9F0607A0000000651010DF60020005DF0A034A4342DF0B0101F805DF06020005DF2A0123DF0C039F37049F090202009F150270119F160F343535363030343138323030202020DF23020000DF2606000000000000DF11050100000000DF1205FC60ACF800DF1305FC60ACF800DF270320F0C8DF22082123110001000000DF28026000DF250422000000DF7F0100FB5CDF010105DF07028600DF0606000000005001DF11050010000000DF1205FC60ACF800DF1305FC6024A800DF2606000000000000DF1406000099999999DF1606000000005001DF20022300DF2103F38000DF18020013DF4C04A0600000FB59DF010105DF07021900DF0606009999999999DF1105FFFFFFFFFFDF12050000000000DF13050000000000DF380120DF2606000000000000DF1406000099999999DF1606000099999999DF20022200DF2103D38000DF18020013"
 
-  +--+ Byte 1 (9F)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
-
-  |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
-
-  |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  +--+ Byte 2 (06)
-
-  +--+ Byte 3 (07)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
-
-  +--+ Byte 4 (A0)
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
-
   +--+ 9F06 (EMVCO_AID, len=0x07) value="A0000000651010"
 
   +--+ DF60 (POSEIDON_EMV_CARD_ID, len=0x02) value="0005"
@@ -2152,9 +1796,9 @@
 
     +--+ Byte 1 (23)
 
-    |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
+    |  +--+  Bit 2 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Print product name on the receipt
 
   +--+ DF0C (ZKA_TM_DEFAULT_DDOL, len=0x03) value="9F3704"
 
@@ -2178,27 +1822,27 @@
 
     +--+ Byte 1 (FC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
     +--+ Byte 3 (AC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> CV failed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> CV failed
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> PIN try limit exceeded
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> PIN try limit exceeded
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
     +--+ Byte 4 (F8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -2206,27 +1850,27 @@
 
     +--+ Byte 1 (FC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
     +--+ Byte 3 (AC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> CV failed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> CV failed
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> PIN try limit exceeded
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> PIN try limit exceeded
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
     +--+ Byte 4 (F8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -2234,19 +1878,19 @@
 
     +--+ Byte 1 (20)
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
     +--+ Byte 2 (F0)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
     +--+ Byte 3 (C8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> SDA
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> SDA
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
   +--+ DF22 (ZKA_TM_TRANSACTION_RESTRICTIONS, len=0x08) value="2123110001000000"
 
@@ -2254,9 +1898,9 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Goods
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Services
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Services
 
     +--+ Byte 2 (00)
 
@@ -2272,11 +1916,11 @@
 
       +--+ Byte 1 (86)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> initial reservation
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> initial reservation
 
-      |  +--+  Bit 0 (Mask 0x02, value 0x02) --> reservation increase
+      |  +--+  Bit 2 (Mask 0x02, value 0x02) --> reservation increase
 
     +--+ DF06 (ZKA_TM_MID, len=0x06) value="000000005001"
 
@@ -2286,33 +1930,33 @@
 
       +--+ Byte 2 (10)
 
-      |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Requested service not allowed
+      |  +--+  Bit 5 (Mask 0x10, value 0x10) --> Requested service not allowed
 
     +--+ DF12 (ZKA_TM_TAC_ONLINE, len=0x05) value="FC60ACF800"
 
       +--+ Byte 1 (FC)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
       +--+ Byte 3 (AC)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> CV failed
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> CV failed
 
-      |  +--+  Bit 0 (Mask 0x20, value 0x20) --> PIN try limit exceeded
+      |  +--+  Bit 6 (Mask 0x20, value 0x20) --> PIN try limit exceeded
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
       +--+ Byte 4 (F8)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
       +--+ Byte 5 (00)
 
@@ -2320,23 +1964,23 @@
 
       +--+ Byte 1 (FC)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
       +--+ Byte 3 (24)
 
-      |  +--+  Bit 0 (Mask 0x20, value 0x20) --> PIN try limit exceeded
+      |  +--+  Bit 6 (Mask 0x20, value 0x20) --> PIN try limit exceeded
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
       +--+ Byte 4 (A8)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
       +--+ Byte 5 (00)
 
@@ -2370,11 +2014,11 @@
 
       +--+ Byte 1 (FF)
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
       +--+ Byte 2 (FF)
 
-      |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Requested service not allowed
+      |  +--+  Bit 5 (Mask 0x10, value 0x10) --> Requested service not allowed
 
     +--+ DF12 (ZKA_TM_TAC_ONLINE, len=0x05) value="0000000000"
 
@@ -2414,48 +2058,6 @@
 
 +--+ E2 (ZKA_TM_APPLICATION_CONFIG_DATA_TEMPLATE, len=0x5C) value="DF06020005DF60020005DF0A034A4342DF1406000000000000DF150F343535363030343138323030202020DF460102DF180104DF2703C0B0C8DF22082103110000000000DF28026000DF2A0107DF250422000000F106F904DF2C0135"
 
-  +--+ Byte 1 (DF)
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Don't evaluate the PAN
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
-
-  |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
-
-  |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  +--+ Byte 2 (06)
-
-  +--+ Byte 3 (02)
-
-  +--+ Byte 4 (00)
-
   +--+ DF06 (ZKA_TM_MID, len=0x02) value="0005"
 
   +--+ DF60 (POSEIDON_EMV_CARD_ID, len=0x02) value="0005"
@@ -2476,19 +2078,19 @@
 
     +--+ Byte 1 (C0)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Manual key entry
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
     +--+ Byte 2 (B0)
 
     +--+ Byte 3 (C8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> SDA
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> SDA
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
   +--+ DF22 (ZKA_TM_TRANSACTION_RESTRICTIONS, len=0x08) value="2103110000000000"
 
@@ -2496,9 +2098,9 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Goods
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Services
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Services
 
     +--+ Byte 2 (00)
 
@@ -2506,11 +2108,11 @@
 
     +--+ Byte 1 (07)
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
 
-    |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
+    |  +--+  Bit 2 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Print product name on the receipt
 
   +--+ DF25 (ZKA_TM_TICKET_PARAMETER, len=0x04) value="22000000"
 
@@ -2521,48 +2123,6 @@
       +--+ DF2C (ZKA_TM_MAG_PREFIX, len=0x01) value="35"
 
 +--+ E2 (ZKA_TM_APPLICATION_CONFIG_DATA_TEMPLATE, len=0x3D5) value="9F0607A0000000043060DF60020015DF0A074D61657374726FDF0B0101F00D9F060AA0000003591010028001F805DF06020015DF2A0123DF0C039F3704DF0D0F9F02065F2A029A039C0195059F37049F090200029F15027011DF280260009F5301529F4E2842535061796F6E6520476D62482020202020202020202020204672616E6B6675727420616D2044459F160F343535363030343138323030202020DF2606000000000000DF23020000DF1205FE50BCF800DF1305FE50BCA000DF270320D0C8DF11050000000000DF22082123110001000000DF250422000000DF7F0101FF608201C9DF700101DF6E0101DF6F8201BC4920616363657074207468617420492068617665202343524C46236265656E206F66666572656420612063686F696365206F662343524C462363757272656E6369657320696E636C7564696E67207468652343524C46236D65726368616E742773206C6F63616C2343524C462363757272656E63792E2343524C462349206163636570742074686520636F6E76657273696F6E2343524C46237261746520616E642066696E616C20616D6F756E742343524C4623616E642074686174207468652073656C65637465642343524C46237472616E73616374696F6E2063757272656E63792069732343524C46232349434343232E2343524C462344434320536572766963652069732343524C46236F66666572656420627920746865206D65726368616E742343524C4623696E636C7564696E672061206D61726B2D75702343524C46236F6E207265666572656E63652072617465206F663A2343524C4623234443434D23252343524C4623234D555445232343524C46232343524C46234920616363657074207468652061626F76652343524C4623636F6E646974696F6E732343524C46232343524C46235945533A205B585D20204E4F3A205B205DFB818DDF010102DF07028600DF0606000000005001DF1606000000005000DF0801019F1D084C52800000000000DF11050000800000DF1205F45004800CDF1305F45004800CDF2703204808DF81180140DF81190108DF811A039F6A04DF811B01B0DF811C02012CDF811D01039F6D020001DF81270201F4DF1406000099999999DF1506000099999999DF4C0480600000FB8193DF010102DF07021900DF0606000000005001DF0801019F1D080808800000000000DF1105FFFFFFFFFFDF12050000000000DF13050000000000DF380120DF2606000000000000DF2703E00808DF28026000DF81180100DF81190108DF811A039F6A04DF811B01B0DF811C02012CDF811D0103DF81270201F4DF1406000099999999DF1506000099999999DF1606000000000000"
-
-  +--+ Byte 1 (9F)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
-
-  |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
-
-  |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  +--+ Byte 2 (06)
-
-  +--+ Byte 3 (07)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
-
-  +--+ Byte 4 (A0)
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
 
   +--+ 9F06 (EMVCO_AID, len=0x07) value="A0000000043060"
 
@@ -2584,9 +2144,9 @@
 
     +--+ Byte 1 (23)
 
-    |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
+    |  +--+  Bit 2 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Print product name on the receipt
 
   +--+ DF0C (ZKA_TM_DEFAULT_DDOL, len=0x03) value="9F3704"
 
@@ -2600,9 +2160,9 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Goods
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Services
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Services
 
     +--+ Byte 2 (00)
 
@@ -2620,29 +2180,29 @@
 
     +--+ Byte 1 (FE)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
     +--+ Byte 3 (BC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> CV failed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> CV failed
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> PIN try limit exceeded
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> PIN try limit exceeded
 
-    |  +--+  Bit 0 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
+    |  +--+  Bit 5 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
     +--+ Byte 4 (F8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -2650,29 +2210,29 @@
 
     +--+ Byte 1 (FE)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
     +--+ Byte 3 (BC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> CV failed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> CV failed
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> PIN try limit exceeded
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> PIN try limit exceeded
 
-    |  +--+  Bit 0 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
+    |  +--+  Bit 5 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
     +--+ Byte 4 (A0)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -2680,19 +2240,19 @@
 
     +--+ Byte 1 (20)
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
     +--+ Byte 2 (D0)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
     +--+ Byte 3 (C8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> SDA
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> SDA
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
   +--+ DF11 (ZKA_TM_TAC_DENIAL, len=0x05) value="0000000000"
 
@@ -2722,11 +2282,11 @@
 
       +--+ Byte 1 (86)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> initial reservation
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> initial reservation
 
-      |  +--+  Bit 0 (Mask 0x02, value 0x02) --> reservation increase
+      |  +--+  Bit 2 (Mask 0x02, value 0x02) --> reservation increase
 
     +--+ DF06 (ZKA_TM_MID, len=0x06) value="000000005001"
 
@@ -2746,19 +2306,19 @@
 
       +--+ Byte 1 (F4)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
       +--+ Byte 3 (04)
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
       +--+ Byte 4 (80)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
       +--+ Byte 5 (0C)
 
@@ -2768,19 +2328,19 @@
 
       +--+ Byte 1 (F4)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
       +--+ Byte 3 (04)
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
       +--+ Byte 4 (80)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
       +--+ Byte 5 (0C)
 
@@ -2790,15 +2350,15 @@
 
       +--+ Byte 1 (20)
 
-      |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+      |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
       +--+ Byte 2 (48)
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
       +--+ Byte 3 (08)
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
     +--+ DF8118 (CVM Required, len=0x01) value="40"
 
@@ -2840,11 +2400,11 @@
 
       +--+ Byte 1 (FF)
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
       +--+ Byte 2 (FF)
 
-      |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Requested service not allowed
+      |  +--+  Bit 5 (Mask 0x10, value 0x10) --> Requested service not allowed
 
     +--+ DF12 (ZKA_TM_TAC_ONLINE, len=0x05) value="0000000000"
 
@@ -2874,25 +2434,25 @@
 
       +--+ Byte 1 (E0)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Manual key entry
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
-      |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+      |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
       +--+ Byte 2 (08)
 
       +--+ Byte 3 (08)
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
     +--+ DF28 (ZKA_TM_RESTRICTED_ADDITIONAL_TERMINAL_CAPABILITIES, len=0x02) value="6000"
 
       +--+ Byte 1 (60)
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Goods
 
-      |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Services
+      |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Services
 
       +--+ Byte 2 (00)
 
@@ -2918,48 +2478,6 @@
 
 +--+ E2 (ZKA_TM_APPLICATION_CONFIG_DATA_TEMPLATE, len=0x3FB) value="DF06020015DF60020015DF0A074D61657374726FDF1406000000000000DF150F343535363030343138323030202020DF460102DF180104DF270340D0C8DF22082100000000000000DF250422000000DF28026000FF608201C9DF700101DF6E0101DF6F8201BC4920616363657074207468617420492068617665202343524C46236265656E206F66666572656420612063686F696365206F662343524C462363757272656E6369657320696E636C7564696E67207468652343524C46236D65726368616E742773206C6F63616C2343524C462363757272656E63792E2343524C462349206163636570742074686520636F6E76657273696F6E2343524C46237261746520616E642066696E616C20616D6F756E742343524C4623616E642074686174207468652073656C65637465642343524C46237472616E73616374696F6E2063757272656E63792069732343524C46232349434343232E2343524C462344434320536572766963652069732343524C46236F66666572656420627920746865206D65726368616E742343524C4623696E636C7564696E672061206D61726B2D75702343524C46236F6E207265666572656E63652072617465206F663A2343524C4623234443434D23252343524C4623234D555445232343524C46232343524C46234920616363657074207468652061626F76652343524C4623636F6E646974696F6E732343524C46232343524C46235945533A205B585D20204E4F3A205B205DF18201D5F904DF2C0150F904DF2C0156F904DF2C0157F904DF2C0158F904DF2C0161F904DF2C0162F904DF2C0166F904DF2C0168F904DF2C0169F905DF2C02600FF905DF2C02602FF905DF2C02603FF905DF2C02604FF905DF2C02605FF905DF2C02606FF905DF2C02607FF905DF2C02608FF905DF2C02609FF905DF2C026010F905DF2C026012F905DF2C026013F905DF2C026014F905DF2C026015F905DF2C026016F905DF2C026017F905DF2C026018F905DF2C026019F905DF2C02630FF905DF2C02631FF905DF2C02632FF905DF2C02633FF905DF2C02634FF905DF2C02635FF905DF2C02637FF905DF2C02638FF905DF2C02639FF905DF2C026360F905DF2C026361F905DF2C026363F905DF2C026364F905DF2C026365F905DF2C026366F905DF2C026367F905DF2C026368F905DF2C026369F906DF2C0363621FF906DF2C0363622FF906DF2C0363623FF906DF2C0363624FF906DF2C0363625FF906DF2C0363626FF906DF2C0363627FF906DF2C0363628FF906DF2C0363629FF905DF2C02640FF905DF2C02641FF905DF2C02642FF905DF2C02643FF905DF2C02670FF905DF2C02671FF905DF2C02673FF905DF2C02674FF905DF2C02675FF905DF2C02676FF905DF2C02677FF905DF2C02678FF905DF2C02679F"
 
-  +--+ Byte 1 (DF)
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Don't evaluate the PAN
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
-
-  |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
-
-  |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  +--+ Byte 2 (06)
-
-  +--+ Byte 3 (02)
-
-  +--+ Byte 4 (00)
-
   +--+ DF06 (ZKA_TM_MID, len=0x02) value="0015"
 
   +--+ DF60 (POSEIDON_EMV_CARD_ID, len=0x02) value="0015"
@@ -2980,19 +2498,19 @@
 
     +--+ Byte 1 (40)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
     +--+ Byte 2 (D0)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
     +--+ Byte 3 (C8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> SDA
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> SDA
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
   +--+ DF22 (ZKA_TM_TRANSACTION_RESTRICTIONS, len=0x08) value="2100000000000000"
 
@@ -3002,9 +2520,9 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Goods
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Services
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Services
 
     +--+ Byte 2 (00)
 
@@ -3288,48 +2806,6 @@
 
 +--+ E2 (ZKA_TM_APPLICATION_CONFIG_DATA_TEMPLATE, len=0x3CD) value="9F0607A0000000041010DF60020001DF0A0A4D617374657243617264DF0B0101F00D9F060AA0000003591010028001F805DF06020001DF2A0123DF0C039F3704DF0D0F9F02065F2A029A039C0195059F37049F090200029F15027011DF280260009F5301529F4E2842535061796F6E6520476D62482020202020202020202020204672616E6B6675727420616D2044459F160F343535363030343138323030202020DF2606000000000000DF23020000DF1205FE50BCF800DF1305FE50BCA000DF270320F048DF11050000000000DF22082123110001000000DF250422000000DF7F0101FF608201C9DF700101DF6E0101DF6F8201BC4920616363657074207468617420492068617665202343524C46236265656E206F66666572656420612063686F696365206F662343524C462363757272656E6369657320696E636C7564696E67207468652343524C46236D65726368616E742773206C6F63616C2343524C462363757272656E63792E2343524C462349206163636570742074686520636F6E76657273696F6E2343524C46237261746520616E642066696E616C20616D6F756E742343524C4623616E642074686174207468652073656C65637465642343524C46237472616E73616374696F6E2063757272656E63792069732343524C46232349434343232E2343524C462344434320536572766963652069732343524C46236F66666572656420627920746865206D65726368616E742343524C4623696E636C7564696E672061206D61726B2D75702343524C46236F6E207265666572656E63652072617465206F663A2343524C4623234443434D23252343524C4623234D555445232343524C46232343524C46234920616363657074207468652061626F76652343524C4623636F6E646974696F6E732343524C46232343524C46235945533A205B585D20204E4F3A205B205DFB8197DF010102DF07028600DF0606000000005001DF1606000000005000DF0801019F1D086C72800000000000DF11050000000000DF1205F45084800CDF1305F45084800CDF2703E06808DF81180160DF81190108DF811A039F6A04DF811B01B0DF811C02012CDF811D01039F6D020001DF811E0110DF812C0110DF81270201F4DF1406000099999999DF1506000099999999DF4C0480600000FB7FDF010102DF07021900DF0606000000005001DF0801019F1D086C7A000000000000DF1105FFFFFFFFFFDF380120DF2703E00808DF81180100DF81190108DF811A039F6A04DF811B01B0DF811C02012CDF811D0103DF811E0108DF812C0108DF81270201F4DF1406999999999999DF1506999999999999DF1606000000000000"
 
-  +--+ Byte 1 (9F)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
-
-  |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
-
-  |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  +--+ Byte 2 (06)
-
-  +--+ Byte 3 (07)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
-
-  +--+ Byte 4 (A0)
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
-
   +--+ 9F06 (EMVCO_AID, len=0x07) value="A0000000041010"
 
   +--+ DF60 (POSEIDON_EMV_CARD_ID, len=0x02) value="0001"
@@ -3350,9 +2826,9 @@
 
     +--+ Byte 1 (23)
 
-    |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
+    |  +--+  Bit 2 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Print product name on the receipt
 
   +--+ DF0C (ZKA_TM_DEFAULT_DDOL, len=0x03) value="9F3704"
 
@@ -3366,9 +2842,9 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Goods
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Services
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Services
 
     +--+ Byte 2 (00)
 
@@ -3386,29 +2862,29 @@
 
     +--+ Byte 1 (FE)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
     +--+ Byte 3 (BC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> CV failed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> CV failed
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> PIN try limit exceeded
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> PIN try limit exceeded
 
-    |  +--+  Bit 0 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
+    |  +--+  Bit 5 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
     +--+ Byte 4 (F8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -3416,29 +2892,29 @@
 
     +--+ Byte 1 (FE)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
     +--+ Byte 3 (BC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> CV failed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> CV failed
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> PIN try limit exceeded
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> PIN try limit exceeded
 
-    |  +--+  Bit 0 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
+    |  +--+  Bit 5 (Mask 0x10, value 0x10) --> PIN entry required but PP not working
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> PIN entry required but PIN not entered
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
     +--+ Byte 4 (A0)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -3446,17 +2922,17 @@
 
     +--+ Byte 1 (20)
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
     +--+ Byte 2 (F0)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
     +--+ Byte 3 (48)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
   +--+ DF11 (ZKA_TM_TAC_DENIAL, len=0x05) value="0000000000"
 
@@ -3486,11 +2962,11 @@
 
       +--+ Byte 1 (86)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> initial reservation
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> initial reservation
 
-      |  +--+  Bit 0 (Mask 0x02, value 0x02) --> reservation increase
+      |  +--+  Bit 2 (Mask 0x02, value 0x02) --> reservation increase
 
     +--+ DF06 (ZKA_TM_MID, len=0x06) value="000000005001"
 
@@ -3510,21 +2986,21 @@
 
       +--+ Byte 1 (F4)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
       +--+ Byte 3 (84)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> CV failed
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> CV failed
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
       +--+ Byte 4 (80)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
       +--+ Byte 5 (0C)
 
@@ -3534,21 +3010,21 @@
 
       +--+ Byte 1 (F4)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
       +--+ Byte 3 (84)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> CV failed
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> CV failed
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
       +--+ Byte 4 (80)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
       +--+ Byte 5 (0C)
 
@@ -3558,19 +3034,19 @@
 
       +--+ Byte 1 (E0)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Manual key entry
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
-      |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+      |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
       +--+ Byte 2 (68)
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
       +--+ Byte 3 (08)
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
     +--+ DF8118 (CVM Required, len=0x01) value="60"
 
@@ -3616,11 +3092,11 @@
 
       +--+ Byte 1 (FF)
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
       +--+ Byte 2 (FF)
 
-      |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Requested service not allowed
+      |  +--+  Bit 5 (Mask 0x10, value 0x10) --> Requested service not allowed
 
     +--+ DF38 (Transaktion Typ for Kernel Processing, len=0x01) value="20"
 
@@ -3628,17 +3104,17 @@
 
       +--+ Byte 1 (E0)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Manual key entry
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
-      |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+      |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
       +--+ Byte 2 (08)
 
       +--+ Byte 3 (08)
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
     +--+ DF8118 (CVM Required, len=0x01) value="00"
 
@@ -3666,48 +3142,6 @@
 
 +--+ E2 (ZKA_TM_APPLICATION_CONFIG_DATA_TEMPLATE, len=0x119) value="DF06020001DF60020001DF0A0A4D617374657243617264DF1406000000000000DF150F343535363030343138323030202020DF460102DF180101DF2703C020C8DF22082123110000000000DF250422000000DF28026000DF2A0163F181BBF905DF2C022221F905DF2C022222F905DF2C022223F905DF2C022224F905DF2C022225F905DF2C022226F905DF2C022227F905DF2C022228F905DF2C022229F905DF2C02223FF905DF2C02224FF905DF2C02225FF905DF2C02226FF905DF2C02227FF905DF2C02228FF905DF2C02229FF905DF2C02270FF905DF2C02271FF905DF2C022720F904DF2C0151F904DF2C0152F904DF2C0153F904DF2C0154F904DF2C0155F904DF2C0123F904DF2C0124F904DF2C0125F904DF2C0126"
 
-  +--+ Byte 1 (DF)
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Don't evaluate the PAN
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
-
-  |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
-
-  |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  +--+ Byte 2 (06)
-
-  +--+ Byte 3 (02)
-
-  +--+ Byte 4 (00)
-
   +--+ DF06 (ZKA_TM_MID, len=0x02) value="0001"
 
   +--+ DF60 (POSEIDON_EMV_CARD_ID, len=0x02) value="0001"
@@ -3724,25 +3158,25 @@
 
     +--+ Byte 1 (01)
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Fallback allowed, denied if application or chip blocked
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Fallback allowed, denied if application or chip blocked
 
   +--+ DF27 (ZKA_TM_RESTRICTED_TERMINAL_CAPABILITIES, len=0x03) value="C020C8"
 
     +--+ Byte 1 (C0)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Manual key entry
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
     +--+ Byte 2 (20)
 
     +--+ Byte 3 (C8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> SDA
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> SDA
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
   +--+ DF22 (ZKA_TM_TRANSACTION_RESTRICTIONS, len=0x08) value="2123110000000000"
 
@@ -3752,9 +3186,9 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Goods
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Services
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Services
 
     +--+ Byte 2 (00)
 
@@ -3762,11 +3196,11 @@
 
     +--+ Byte 1 (63)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Don't evaluate the PAN
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Don't evaluate the PAN
 
-    |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
+    |  +--+  Bit 2 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Print product name on the receipt
 
   +--+ F1 (ZKA_TM_IDENTIFYING_MAG_STRIPE_DATA, len=0xBB) value="F905DF2C022221F905DF2C022222F905DF2C022223F905DF2C022224F905DF2C022225F905DF2C022226F905DF2C022227F905DF2C022228F905DF2C022229F905DF2C02223FF905DF2C02224FF905DF2C02225FF905DF2C02226FF905DF2C02227FF905DF2C02228FF905DF2C02229FF905DF2C02270FF905DF2C02271FF905DF2C022720F904DF2C0151F904DF2C0152F904DF2C0153F904DF2C0154F904DF2C0155F904DF2C0123F904DF2C0124F904DF2C0125F904DF2C0126"
 
@@ -3884,48 +3318,6 @@
 
 +--+ E2 (ZKA_TM_APPLICATION_CONFIG_DATA_TEMPLATE, len=0xFD4) value="9F060AA0000003599999999999DF600200BCDF85000AA0000003591010028001DF7106030000000000DF0A1053455041204C61737473636872696674DF54064F6E6C696E65DF55074F66666C696E65DF50085345504120454C56DF56089F339F349F369F6EDF1606000000000000DF2703202800DF22082000000000000000DF590101DF250422100000DF520165DF5B0115DF770101DF510101DF5A5645696E204C617374736368726966746D616E64617420777572646520626572656974732065727465696C743B2065696E6520556E7465727363687269667420697374206E69636874206572666F726465726C6963682EDF530100FB42DF0103D10000DF07028000DF090100DF1606000000000000DF2703202800DF56069F339F349F36DF770100DF7A0A6B6F6E74616B746C6F73DF851406999999999999FB81D8DF0103D10000DF07020800DF090100DF0406000099999999DF0506000000000000DF1606000099999999DF2703202800DF770110DF7A0A6B6F6E74616B746C6F73FF518193DF01012ADF0801019F090200029F1D088000800000000000DF1105FFFFFFFFFFDF12050000000000DF13050000000000DF380120DF2606000000000000DF2703200800DF28026000DF81180100DF81190108DF811A039F6A04DF811B01B0DF811C02012CDF811D0103DF81270201F4DF813A058400800000DF1406999999999999DF1506999999999999DF1606999999999999DF5781A84469652042656C617374756E67206572666F6C6774207A756D206EE4636873746DF6676C696368656E202343524C462342616E6B617262656974737461672E2343524C46232343524C46235765697465726520496E666F726D6174696F6E656E207A7520534550412D4C617374736368726966743A2343524C462368747470733A2F2F7777772E7061796F6E652E636F6D2F2343524C4623534550412D4C61737473636872696674DF58820D0D534550412D4C617374736368726966746D616E6461742343524C46234963682065726DE463687469676520646965205041594F4E4520476D62482C204C796F6E6572205374722E2031352C203630353238204672616E6B6675727420616D204D61696E2028225041594F4E4522292C20476CE47562696765722D49442044453136453031303030303030323032343520736F77696520646173206F62656E2F756D7365697469672067656E616E6E746520556E7465726E65686D656E2C205A61686C756E67656E20766F6E206D65696E656D206F62656E2F756D73656974696720616E6765676562656E656E204B6F6E746F206D697474656C73204C617374736368726966742065696E7A757A696568656E2E205A75676C6569636820776569736520696368206D65696E204B7265646974696E73746974757420616E2C2064696520617566206D65696E204B6F6E746F2067657A6F67656E656E204C61737473636872696674656E2065696E7A756CF673656E2E2048696E776569733A20496368206B616E6E20696E6E657268616C6220766F6E206163687420576F6368656E2C20626567696E6E656E64206D69742064656D2042656C617374756E6773646174756D2C206469652045727374617474756E67206465732062656C6173746574656E204265747261676573207665726C616E67656E2E2045732067656C74656E20646162656920646965206D6974206D65696E656D204B7265646974696E7374697475742076657265696E62617274656E20426564696E67756E67656E2E2343524C46232343524C46235769656465726B656872656E6465204C617374736368726966742343524C462344617320534550412D4C617374736368726966746D616E6461742067696C7420617563682066FC72206BFC6E6674696765205A61686C756E67656E206F686E6520556E746572736368726966742028466F6C67656C61737473636872696674656E2C206767662E2068E46E646C6572FC6265726772656966656E64292E2045696E206E65756573204D616E646174206B616E6E2066616C6C776569736520616E6765666F72646572742077657264656E2E205765697465726520496E666F726D6174696F6E656E20756E7465722068747470733A2F2F7777772E7061796F6E652E636F6D2F2343524C4623534550412D4C617374736368726966742343524C46232343524C4623566572736368756C646574652052FC636B6C61737473636872696674656E202D20526563687473766572666F6C67756E67736B6F7374656E2343524C46234D6972206973742062656B616E6E742C2064617373206A656465204E6963687465696E6CF673756E6720646572204C6173747363687269667420282252FC636B6C6173747363687269667422292042616E6B676562FC6872656E20696E2074617473E463686C69636865722048F6686520736F77696520657477616967652077656974657265205363686164656E7365727361747A706F736974696F6E656E20696E736265736F6E6465726520617573205665727A7567202D207A2E422E20526563687473766572666F6C67756E67736B6F7374656E20696E20466F726D20766F6E20496E6B6173736F2D206F64657220526563687473616E77616C74736B6F7374656E206F646572205A696E73656E202D206175736CF673656E206B616E6E2C207A7520646572656E2045727361747A206963682062656920766F6E206D697220766572736368756C646574656E2052FC636B6C61737473636872696674656E2076657270666C6963687465742062696E2E2046FC722064696573656E2046616C6C2065726DE463687469676520696368205041594F4E45206F64657220646572656E205265636874736469656E73746C6569737465722C2064656E204B61756662657472616720756E642F6F6465722065747761696765205363686164656E7365727361747A616E737072FC63686520766F6E206D65696E656D204B6F6E746F2065696E7A757A696568656E2E2343524C46232343524C4623416472657373776569746572676162652343524C4623496368207765697365206D65696E204B7265646974696E73746974757420756E77696465727275666C69636820616E2C2066FC722064656E2046616C6C20646572204E6963687465696E6CF673756E6720646572204C61737473636872696674206F6465722065696E65722064657220466F6C67656C61737473636872696674656E2064656D20466F72646572756E6773696E686162657220736F7769652064657373656E204469656E73746C6569737465726E2061756620416E666F72646572756E67206D65696E656E204E616D656E20756E64206D65696E6520416E73636872696674207A75722047656C74656E646D616368756E672064657220466F72646572756E67206D69747A757465696C656E2E2343524C46232343524C4623446174656E73636875747A72656368746C6963686520496E666F726D6174696F6E2343524C4623446173206F62656E2F756D7365697469672067656E616E6E746520556E7465726E65686D656E20282248E46E646C6572222920756E64205041594F4E4520766572617262656974656E204968726520706572736F6E656E62657A6F67656E656E20446174656E20696E20DC62657265696E7374696D6D756E67206D69742064656E2067657365747A6C696368656E20416E666F72646572756E67656E2E204465722048E46E646C657220756E64205041594F4E452073696E642067657472656E6E7420656967656E6520566572616E74776F72746C696368652066FC722064696520566572617262656974756E6720496872657220446174656E2E204465722048E46E646C6572206572686562742049687265205A61686C756E6773646174656E20756E64206769627420646965736520616E205041594F4E45207765697465722E20446965206A657765696C69676520566572617262656974756E6720496872657220446174656E2064757263682064656E2048E46E646C657220756E64205041594F4E45206572666F6C6774207A757220447572636866FC6872756E67204968726572205A61686C756E67656E20616E2064656E2048E46E646C657220736F776965207A75722042656C6567617263686976696572756E67206E6163682064656E2067657365747A6C696368656E20566F7273636872696674656E2E205041594F4E45207665726172626569746574204968726520446174656E207A7564656D207A75722056657268696E646572756E6720766F6E204B617274656E6D6973736272617563682028696E6B6C2E20456D706665686C756E6720616E20616E646572652C20616D2053797374656D20766F6E205041594F4E4520616E67657363686C6F7373656E652048E46E646C65722C206F622065696E65205A61686C756E67206D697420534550412D454C5620616B7A657074696572742077657264656E206B616E6E2920756E64207A75722042656772656E7A756E672064657320526973696B6F7320766F6E205A61686C756E677361757366E46C6C656E20736F776965207A757220466F72646572756E67736265697472656962756E67206E6163682065696E65722052FC636B6C617374736368726966742E2053696520686162656E206E616368204D61DF67616265206465722067657365747A6C696368656E2042657374696D6D756E67656E2064617320526563687420617566204175736B756E66742C20426572696368746967756E672C204CF6736368756E672C2045696E73636872E46E6B756E672064657220566572617262656974756E6720736F7769652061756620446174656EFC626572747261676261726B6569742E205A7564656D20686162656E20536965206461732052656368742C2064657220566572617262656974756E6720496872657220446174656E206E616368204D61DF67616265206465722067657365747A6C696368656E2042657374696D6D756E67656E207A75207769646572737072656368656E2E205A757220417573FC62756E6720496872657220526563687465206BF66E6E656E205369652073696368206A656465727A65697420616E2064656E2048E46E646C657220756E7465722064656E206F62656E2F756D7365697469672067656E616E6E74656E204B6F6E74616B74646174656E20627A772E20616E205041594F4E4520756E7465722064657220452D4D61696C2D416472657373652070726976616379407061796F6E652E636F6D2077656E64656E2E205A7564656D20686162656E20536965206461732052656368742C2065696E652042657363687765726465206265692065696E657220417566736963687473626568F67264652065696E7A757265696368656E2E2044696520766F6C6C7374E46E646967656E20496E666F726D6174696F6E656E207A757220566572617262656974756E6720496872657220446174656E20657268616C74656E20536965206265696D2048E46E646C657220736F77696520696D20496E7465726E657420756E7465722068747470733A2F2F7777772E7061796F6E652E636F6D2F647367766F"
 
-  +--+ Byte 1 (9F)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
-
-  |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
-
-  |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  +--+ Byte 2 (06)
-
-  +--+ Byte 3 (0A)
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
-
-  +--+ Byte 4 (A0)
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
-
   +--+ 9F06 (EMVCO_AID, len=0x0A) value="A0000003599999999999"
 
   +--+ DF60 (POSEIDON_EMV_CARD_ID, len=0x02) value="00BC"
@@ -3950,7 +3342,7 @@
 
     +--+ Byte 1 (20)
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
     +--+ Byte 2 (28)
 
@@ -3982,7 +3374,7 @@
 
       +--+ Byte 1 (80)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
 
     +--+ DF09 (ZKA_TM_KERNEL_PRIORITY, len=0x01) value="00"
 
@@ -3992,7 +3384,7 @@
 
       +--+ Byte 1 (20)
 
-      |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+      |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
       +--+ Byte 2 (28)
 
@@ -4026,7 +3418,7 @@
 
       +--+ Byte 1 (20)
 
-      |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+      |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
       +--+ Byte 2 (28)
 
@@ -4044,48 +3436,6 @@
 
 +--+ E2 (ZKA_TM_APPLICATION_CONFIG_DATA_TEMPLATE, len=0x175) value="9F0608A000000333010101DF60020095DF0A0E556E696F6E506179204465626974DF0B0101F805DF06020095DF2A0123DF0C039F37049F090200209F15027011DF23020000DF270360F0C8DF11050010000000DF22082120000000000000DF280260009F4E2842535061796F6E6520476D62482020202020202020202020204672616E6B6675727420616D2044459F160F343535363030343138323030202020DF2606000000000000DF250422000000DF7F0101DF0E06000000000000DF0F0199DF100199DF2F0101DF1205D84004F800DF1305D84000A800DF40049B029505DF41049B029505DF42049B029505FB43DF010107DF07028600DF0406000099999999DF0506000000000000DF06060000000050019F660436800000DF811C02012CDF811D0103DF2703006808DF4C04A0600000FB40DF010107DF07021900DF0406000099999999DF0506000000000000DF06060000999999999F660436800000DF380120DF811C02012CDF811D0103DF2703E068C8"
 
-  +--+ Byte 1 (9F)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
-
-  |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
-
-  |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  +--+ Byte 2 (06)
-
-  +--+ Byte 3 (08)
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
-
-  +--+ Byte 4 (A0)
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
-
   +--+ 9F06 (EMVCO_AID, len=0x08) value="A000000333010101"
 
   +--+ DF60 (POSEIDON_EMV_CARD_ID, len=0x02) value="0095"
@@ -4102,9 +3452,9 @@
 
     +--+ Byte 1 (23)
 
-    |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
+    |  +--+  Bit 2 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Print product name on the receipt
 
   +--+ DF0C (ZKA_TM_DEFAULT_DDOL, len=0x03) value="9F3704"
 
@@ -4118,21 +3468,21 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
     +--+ Byte 2 (F0)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
     +--+ Byte 3 (C8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> SDA
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> SDA
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
   +--+ DF11 (ZKA_TM_TAC_DENIAL, len=0x05) value="0010000000"
 
@@ -4140,7 +3490,7 @@
 
     +--+ Byte 2 (10)
 
-    |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Requested service not allowed
+    |  +--+  Bit 5 (Mask 0x10, value 0x10) --> Requested service not allowed
 
   +--+ DF22 (ZKA_TM_TRANSACTION_RESTRICTIONS, len=0x08) value="2120000000000000"
 
@@ -4148,9 +3498,9 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Goods
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Services
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Services
 
     +--+ Byte 2 (00)
 
@@ -4176,19 +3526,19 @@
 
     +--+ Byte 1 (D8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
     +--+ Byte 3 (04)
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
     +--+ Byte 4 (F8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -4196,17 +3546,17 @@
 
     +--+ Byte 1 (D8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
     +--+ Byte 3 (00)
 
     +--+ Byte 4 (A8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -4224,11 +3574,11 @@
 
       +--+ Byte 1 (86)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> initial reservation
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> initial reservation
 
-      |  +--+  Bit 0 (Mask 0x02, value 0x02) --> reservation increase
+      |  +--+  Bit 2 (Mask 0x02, value 0x02) --> reservation increase
 
     +--+ DF04 (ZKA_TM_CONFIGURATION_ACTION_CONTROL, len=0x06) value="000099999999"
 
@@ -4248,11 +3598,11 @@
 
       +--+ Byte 2 (68)
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
       +--+ Byte 3 (08)
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
     +--+ DF4C (len=0x04) value="A0600000"
 
@@ -4282,67 +3632,25 @@
 
       +--+ Byte 1 (E0)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Manual key entry
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
-      |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+      |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
       +--+ Byte 2 (68)
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
       +--+ Byte 3 (C8)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> SDA
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> SDA
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
 +--+ E2 (ZKA_TM_APPLICATION_CONFIG_DATA_TEMPLATE, len=0x170) value="9F0608A000000333010102DF60020095DF0A0F556E696F6E506179204372656469749F150270119F160F3435353630303431383230302020209F4E2842535061796F6E6520476D62482020202020202020202020204672616E6B6675727420616D2044459F09020020DF1205D84004F800DF1305D84000A800DF2606000000000000DF23020000DF0B0101DF0C039F3704DF2703E0F0C8DF11050010000000DF22082120000000000000DF28026000DF2A0123F805DF06020095DF250422000000DF7F0101DF0E06000000000000DF0F0199DF100199DF2F0101DF40029B02DF41029B02DF42029B02FB43DF010107DF07028600DF0406000099999999DF0506000000000000DF06060000000050019F660436800000DF811C02012CDF811D0103DF2703006808DF4C04A0600000FB40DF010107DF07021900DF0406000099999999DF0506000000000000DF06060000999999999F660436800000DF380120DF811C02012CDF811D0103DF2703E068C8"
-
-  +--+ Byte 1 (9F)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
-
-  |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
-
-  |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  +--+ Byte 2 (06)
-
-  +--+ Byte 3 (08)
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
-
-  +--+ Byte 4 (A0)
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
 
   +--+ 9F06 (EMVCO_AID, len=0x08) value="A000000333010102"
 
@@ -4362,19 +3670,19 @@
 
     +--+ Byte 1 (D8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
     +--+ Byte 3 (04)
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
     +--+ Byte 4 (F8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -4382,17 +3690,17 @@
 
     +--+ Byte 1 (D8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
     +--+ Byte 3 (00)
 
     +--+ Byte 4 (A8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -4408,23 +3716,23 @@
 
     +--+ Byte 1 (E0)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Manual key entry
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
     +--+ Byte 2 (F0)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
     +--+ Byte 3 (C8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> SDA
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> SDA
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
   +--+ DF11 (ZKA_TM_TAC_DENIAL, len=0x05) value="0010000000"
 
@@ -4432,7 +3740,7 @@
 
     +--+ Byte 2 (10)
 
-    |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Requested service not allowed
+    |  +--+  Bit 5 (Mask 0x10, value 0x10) --> Requested service not allowed
 
   +--+ DF22 (ZKA_TM_TRANSACTION_RESTRICTIONS, len=0x08) value="2120000000000000"
 
@@ -4440,9 +3748,9 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Goods
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Services
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Services
 
     +--+ Byte 2 (00)
 
@@ -4450,9 +3758,9 @@
 
     +--+ Byte 1 (23)
 
-    |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
+    |  +--+  Bit 2 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Print product name on the receipt
 
   +--+ F8 (ZKA_TM_ASSOCIATED_MAG_STRIPE, len=0x05) value="DF06020095"
 
@@ -4484,11 +3792,11 @@
 
       +--+ Byte 1 (86)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> initial reservation
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> initial reservation
 
-      |  +--+  Bit 0 (Mask 0x02, value 0x02) --> reservation increase
+      |  +--+  Bit 2 (Mask 0x02, value 0x02) --> reservation increase
 
     +--+ DF04 (ZKA_TM_CONFIGURATION_ACTION_CONTROL, len=0x06) value="000099999999"
 
@@ -4508,11 +3816,11 @@
 
       +--+ Byte 2 (68)
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
       +--+ Byte 3 (08)
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
     +--+ DF4C (len=0x04) value="A0600000"
 
@@ -4542,67 +3850,25 @@
 
       +--+ Byte 1 (E0)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Manual key entry
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
-      |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+      |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
       +--+ Byte 2 (68)
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
       +--+ Byte 3 (C8)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> SDA
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> SDA
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
 +--+ E2 (ZKA_TM_APPLICATION_CONFIG_DATA_TEMPLATE, len=0x171) value="9F0608A000000333010103DF60020095DF0A10556E696F6E50617920514372656469749F150270119F160F3435353630303431383230302020209F4E2842535061796F6E6520476D62482020202020202020202020204672616E6B6675727420616D2044459F09020020DF1205D84004F800DF1305D84000A800DF2606000000000000DF23020000DF0B0101DF0C039F3704DF2703E0F0C8DF11050010000000DF22082120000000000000DF28026000DF2A0123F805DF06020095DF250422000000DF7F0101DF0E06000000000000DF0F0199DF100199DF2F0101DF40029B02DF41029B02DF42029B02FB43DF010107DF07028600DF0406000099999999DF0506000000000000DF06060000000050019F660436800000DF811C02012CDF811D0103DF2703006808DF4C04A0600000FB40DF010107DF07020900DF0406000099999999DF0506000000000000DF06060000999999999F660436800000DF380120DF811C02012CDF811D0103DF2703E068C8"
-
-  +--+ Byte 1 (9F)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
-
-  |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
-
-  |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  +--+ Byte 2 (06)
-
-  +--+ Byte 3 (08)
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
-
-  +--+ Byte 4 (A0)
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
 
   +--+ 9F06 (EMVCO_AID, len=0x08) value="A000000333010103"
 
@@ -4622,19 +3888,19 @@
 
     +--+ Byte 1 (D8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
     +--+ Byte 3 (04)
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
     +--+ Byte 4 (F8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -4642,17 +3908,17 @@
 
     +--+ Byte 1 (D8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
     +--+ Byte 3 (00)
 
     +--+ Byte 4 (A8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -4668,23 +3934,23 @@
 
     +--+ Byte 1 (E0)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Manual key entry
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
     +--+ Byte 2 (F0)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
     +--+ Byte 3 (C8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> SDA
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> SDA
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
   +--+ DF11 (ZKA_TM_TAC_DENIAL, len=0x05) value="0010000000"
 
@@ -4692,7 +3958,7 @@
 
     +--+ Byte 2 (10)
 
-    |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Requested service not allowed
+    |  +--+  Bit 5 (Mask 0x10, value 0x10) --> Requested service not allowed
 
   +--+ DF22 (ZKA_TM_TRANSACTION_RESTRICTIONS, len=0x08) value="2120000000000000"
 
@@ -4700,9 +3966,9 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Goods
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Services
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Services
 
     +--+ Byte 2 (00)
 
@@ -4710,9 +3976,9 @@
 
     +--+ Byte 1 (23)
 
-    |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
+    |  +--+  Bit 2 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Print product name on the receipt
 
   +--+ F8 (ZKA_TM_ASSOCIATED_MAG_STRIPE, len=0x05) value="DF06020095"
 
@@ -4744,11 +4010,11 @@
 
       +--+ Byte 1 (86)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> initial reservation
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> initial reservation
 
-      |  +--+  Bit 0 (Mask 0x02, value 0x02) --> reservation increase
+      |  +--+  Bit 2 (Mask 0x02, value 0x02) --> reservation increase
 
     +--+ DF04 (ZKA_TM_CONFIGURATION_ACTION_CONTROL, len=0x06) value="000099999999"
 
@@ -4768,11 +4034,11 @@
 
       +--+ Byte 2 (68)
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
       +--+ Byte 3 (08)
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
     +--+ DF4C (len=0x04) value="A0600000"
 
@@ -4802,67 +4068,25 @@
 
       +--+ Byte 1 (E0)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Manual key entry
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
-      |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+      |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
       +--+ Byte 2 (68)
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
       +--+ Byte 3 (C8)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> SDA
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> SDA
 
-      |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+      |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-      |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+      |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
 +--+ E2 (ZKA_TM_APPLICATION_CONFIG_DATA_TEMPLATE, len=0x837) value="DF06020095DF60020095DF0A03555049DF1406000000000000DF150F343535363030343138323030202020DF460102DF180104DF2703C060C8DF22082110000000000000DF28026000DF250422000000DF2A0123F18207DFF906DF2C03620003F906DF2C03620096F906DF2C03620101F906DF2C03620161F906DF2C03620162F906DF2C03620163F906DF2C03620175F906DF2C03620271F906DF2C03620272F906DF2C03620273F906DF2C03620274F906DF2C03620275F906DF2C03620276F906DF2C03620277F906DF2C03620278F906DF2C03620279F906DF2C0362028FF906DF2C0362029FF905DF2C026205F906DF2C03620614F906DF2C03620615F906DF2C03620616F906DF2C03620617F906DF2C03620618F906DF2C03620619F906DF2C0362062FF906DF2C0362063FF906DF2C0362064FF906DF2C0362065FF906DF2C0362066FF906DF2C0362067FF906DF2C0362068FF906DF2C0362069FF905DF2C026207F905DF2C026208F905DF2C026209F905DF2C026210F906DF2C0362110FF906DF2C0362112FF906DF2C0362113FF906DF2C0362114FF906DF2C0362115FF906DF2C0362116FF906DF2C0362117FF906DF2C0362118FF906DF2C0362119FF905DF2C026212F905DF2C026213F905DF2C026214F905DF2C026215F905DF2C026216F905DF2C026217F906DF2C0362180FF906DF2C0362181FF906DF2C0362182FF906DF2C0362184FF906DF2C0362185FF906DF2C03621870F906DF2C03621871F906DF2C03621872F906DF2C03621873F906DF2C03621874F906DF2C03621875F906DF2C03621876F906DF2C03621877F906DF2C03621879F906DF2C0362189FF906DF2C0362190FF906DF2C0362191FF906DF2C0362192FF906DF2C0362193FF906DF2C0362194FF906DF2C0362195FF906DF2C0362196FF906DF2C03621970F906DF2C03621971F906DF2C03621972F906DF2C03621973F906DF2C03621974F906DF2C03621975F906DF2C03622926F906DF2C03622927F906DF2C03622928F906DF2C03622929F906DF2C0362293FF906DF2C0362294FF906DF2C0362295FF906DF2C0362296FF906DF2C0362297FF906DF2C0362298FF906DF2C0362299FF905DF2C026230F905DF2C026231F905DF2C026232F905DF2C026233F905DF2C026234F905DF2C026235F905DF2C026236F906DF2C0362370FF906DF2C0362371FF906DF2C0362372FF906DF2C0362373FF906DF2C0362374FF906DF2C0362375FF906DF2C0362376FF906DF2C0362377FF906DF2C0362378FF906DF2C03623790F906DF2C03623791F906DF2C03623792F906DF2C03623793F906DF2C03623794F906DF2C03623795F906DF2C03623796F906DF2C03623798F906DF2C03623799F905DF2C026238F905DF2C026239F905DF2C02624FF905DF2C02625FF905DF2C02626FF906DF2C0362700FF906DF2C0362701FF906DF2C0362702FF906DF2C0362703FF906DF2C0362704FF906DF2C0362705FF906DF2C0362706FF906DF2C0362707FF906DF2C03627080F906DF2C03627081F906DF2C03628183F906DF2C03628184F906DF2C03628185F906DF2C03628186F906DF2C03628187F906DF2C03628188F906DF2C03628189F906DF2C0362819FF905DF2C026282F905DF2C026283F905DF2C026284F905DF2C026285F905DF2C026286F905DF2C026287F905DF2C026288F906DF2C0362890FF906DF2C0362891FF906DF2C0362892FF906DF2C0362893FF906DF2C0362894FF906DF2C0362895FF906DF2C0362896FF906DF2C0362897FF906DF2C0362898FF906DF2C03628990F906DF2C03628991F906DF2C03628992F906DF2C03628993F906DF2C03628994F906DF2C03628995F906DF2C03628996F906DF2C03628997F906DF2C03628998F906DF2C0362903FF906DF2C0362904FF906DF2C0362905FF906DF2C0362906FF906DF2C0362907FF906DF2C0362908FF906DF2C0362909FF905DF2C026291F905DF2C026292F905DF2C026293F906DF2C0362940FF906DF2C0362941FF906DF2C0362942FF906DF2C0362943FF906DF2C03629440F906DF2C03629440F906DF2C03601382F906DF2C03622126F905DF2C026222F905DF2C026223F905DF2C026224F905DF2C026225F905DF2C026226F905DF2C026227F905DF2C026228F906DF2C0362290FF906DF2C0362291FF906DF2C03622920F906DF2C03622921F906DF2C03622922F906DF2C03622923F906DF2C03622924F906DF2C03622925F906DF2C03690755F906DF2C03900105F906DF2C03900205F906DF2C0390030FF906DF2C0390592FF905DF2C029111F906DF2C03940001F906DF2C03940003F906DF2C03940010F906DF2C03940013F906DF2C03940015F906DF2C03940018F906DF2C03940020F906DF2C03940021F906DF2C03940023F906DF2C03940027F906DF2C03940028F906DF2C03940030F906DF2C03940031F906DF2C03940035F906DF2C03940037F906DF2C03940039F906DF2C03940040F906DF2C03940046F906DF2C03940047F906DF2C03940048F906DF2C03940049F906DF2C03940050F906DF2C03940055F906DF2C03940056F906DF2C03940061F906DF2C03940062F906DF2C03940063F906DF2C03940066F906DF2C03940068F906DF2C03940073F906DF2C03940074F906DF2C03955100F906DF2C03955550F906DF2C03955590F906DF2C03955591F906DF2C03955592F906DF2C03955593F906DF2C03955880F906DF2C03955881F906DF2C03955882F906DF2C03955888F906DF2C0395599FF906DF2C03966666F906DF2C03968807F906DF2C03968808F906DF2C03968809F906DF2C03984300F906DF2C03984301F906DF2C03984302F906DF2C03984303F906DF2C03990027F906DF2C03998800F906DF2C03998801F906DF2C03998802"
-
-  +--+ Byte 1 (DF)
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Don't evaluate the PAN
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
-
-  |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
-
-  |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  +--+ Byte 2 (06)
-
-  +--+ Byte 3 (02)
-
-  +--+ Byte 4 (00)
 
   +--+ DF06 (ZKA_TM_MID, len=0x02) value="0095"
 
@@ -4884,21 +4108,21 @@
 
     +--+ Byte 1 (C0)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Manual key entry
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
     +--+ Byte 2 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
     +--+ Byte 3 (C8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> SDA
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> SDA
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
   +--+ DF22 (ZKA_TM_TRANSACTION_RESTRICTIONS, len=0x08) value="2110000000000000"
 
@@ -4906,9 +4130,9 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Goods
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Services
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Services
 
     +--+ Byte 2 (00)
 
@@ -4918,9 +4142,9 @@
 
     +--+ Byte 1 (23)
 
-    |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
+    |  +--+  Bit 2 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Print product name on the receipt
 
   +--+ F1 (ZKA_TM_IDENTIFYING_MAG_STRIPE_DATA, len=0x7DF) value="F906DF2C03620003F906DF2C03620096F906DF2C03620101F906DF2C03620161F906DF2C03620162F906DF2C03620163F906DF2C03620175F906DF2C03620271F906DF2C03620272F906DF2C03620273F906DF2C03620274F906DF2C03620275F906DF2C03620276F906DF2C03620277F906DF2C03620278F906DF2C03620279F906DF2C0362028FF906DF2C0362029FF905DF2C026205F906DF2C03620614F906DF2C03620615F906DF2C03620616F906DF2C03620617F906DF2C03620618F906DF2C03620619F906DF2C0362062FF906DF2C0362063FF906DF2C0362064FF906DF2C0362065FF906DF2C0362066FF906DF2C0362067FF906DF2C0362068FF906DF2C0362069FF905DF2C026207F905DF2C026208F905DF2C026209F905DF2C026210F906DF2C0362110FF906DF2C0362112FF906DF2C0362113FF906DF2C0362114FF906DF2C0362115FF906DF2C0362116FF906DF2C0362117FF906DF2C0362118FF906DF2C0362119FF905DF2C026212F905DF2C026213F905DF2C026214F905DF2C026215F905DF2C026216F905DF2C026217F906DF2C0362180FF906DF2C0362181FF906DF2C0362182FF906DF2C0362184FF906DF2C0362185FF906DF2C03621870F906DF2C03621871F906DF2C03621872F906DF2C03621873F906DF2C03621874F906DF2C03621875F906DF2C03621876F906DF2C03621877F906DF2C03621879F906DF2C0362189FF906DF2C0362190FF906DF2C0362191FF906DF2C0362192FF906DF2C0362193FF906DF2C0362194FF906DF2C0362195FF906DF2C0362196FF906DF2C03621970F906DF2C03621971F906DF2C03621972F906DF2C03621973F906DF2C03621974F906DF2C03621975F906DF2C03622926F906DF2C03622927F906DF2C03622928F906DF2C03622929F906DF2C0362293FF906DF2C0362294FF906DF2C0362295FF906DF2C0362296FF906DF2C0362297FF906DF2C0362298FF906DF2C0362299FF905DF2C026230F905DF2C026231F905DF2C026232F905DF2C026233F905DF2C026234F905DF2C026235F905DF2C026236F906DF2C0362370FF906DF2C0362371FF906DF2C0362372FF906DF2C0362373FF906DF2C0362374FF906DF2C0362375FF906DF2C0362376FF906DF2C0362377FF906DF2C0362378FF906DF2C03623790F906DF2C03623791F906DF2C03623792F906DF2C03623793F906DF2C03623794F906DF2C03623795F906DF2C03623796F906DF2C03623798F906DF2C03623799F905DF2C026238F905DF2C026239F905DF2C02624FF905DF2C02625FF905DF2C02626FF906DF2C0362700FF906DF2C0362701FF906DF2C0362702FF906DF2C0362703FF906DF2C0362704FF906DF2C0362705FF906DF2C0362706FF906DF2C0362707FF906DF2C03627080F906DF2C03627081F906DF2C03628183F906DF2C03628184F906DF2C03628185F906DF2C03628186F906DF2C03628187F906DF2C03628188F906DF2C03628189F906DF2C0362819FF905DF2C026282F905DF2C026283F905DF2C026284F905DF2C026285F905DF2C026286F905DF2C026287F905DF2C026288F906DF2C0362890FF906DF2C0362891FF906DF2C0362892FF906DF2C0362893FF906DF2C0362894FF906DF2C0362895FF906DF2C0362896FF906DF2C0362897FF906DF2C0362898FF906DF2C03628990F906DF2C03628991F906DF2C03628992F906DF2C03628993F906DF2C03628994F906DF2C03628995F906DF2C03628996F906DF2C03628997F906DF2C03628998F906DF2C0362903FF906DF2C0362904FF906DF2C0362905FF906DF2C0362906FF906DF2C0362907FF906DF2C0362908FF906DF2C0362909FF905DF2C026291F905DF2C026292F905DF2C026293F906DF2C0362940FF906DF2C0362941FF906DF2C0362942FF906DF2C0362943FF906DF2C03629440F906DF2C03629440F906DF2C03601382F906DF2C03622126F905DF2C026222F905DF2C026223F905DF2C026224F905DF2C026225F905DF2C026226F905DF2C026227F905DF2C026228F906DF2C0362290FF906DF2C0362291FF906DF2C03622920F906DF2C03622921F906DF2C03622922F906DF2C03622923F906DF2C03622924F906DF2C03622925F906DF2C03690755F906DF2C03900105F906DF2C03900205F906DF2C0390030FF906DF2C0390592FF905DF2C029111F906DF2C03940001F906DF2C03940003F906DF2C03940010F906DF2C03940013F906DF2C03940015F906DF2C03940018F906DF2C03940020F906DF2C03940021F906DF2C03940023F906DF2C03940027F906DF2C03940028F906DF2C03940030F906DF2C03940031F906DF2C03940035F906DF2C03940037F906DF2C03940039F906DF2C03940040F906DF2C03940046F906DF2C03940047F906DF2C03940048F906DF2C03940049F906DF2C03940050F906DF2C03940055F906DF2C03940056F906DF2C03940061F906DF2C03940062F906DF2C03940063F906DF2C03940066F906DF2C03940068F906DF2C03940073F906DF2C03940074F906DF2C03955100F906DF2C03955550F906DF2C03955590F906DF2C03955591F906DF2C03955592F906DF2C03955593F906DF2C03955880F906DF2C03955881F906DF2C03955882F906DF2C03955888F906DF2C0395599FF906DF2C03966666F906DF2C03968807F906DF2C03968808F906DF2C03968809F906DF2C03984300F906DF2C03984301F906DF2C03984302F906DF2C03984303F906DF2C03990027F906DF2C03998800F906DF2C03998801F906DF2C03998802"
 
@@ -5954,48 +5178,6 @@
 
 +--+ E2 (ZKA_TM_APPLICATION_CONFIG_DATA_TEMPLATE, len=0x329) value="9F0607A0000000032010DF600200A8DF0A0D5649534120656C656374726F6EDF0B0101F0179F0607A00000000320209F060AA0000003591010028001F805DF060200A8DF2A0123DF0C039F37049F0902008C9F15027011DF280260009F4E2842535061796F6E6520476D62482020202020202020202020204672616E6B6675727420616D2044459F160F343535363030343138323030202020DF2606000000000000DF23020000DF1205DC4004F800DF1305DC4000A800DF1903579F08DF270320F0C8DF11050010000000DF22082123110001000000DF250422000000DF35020276DF7F0101FF608201C9DF700101DF6E0101DF6F8201BC4920616363657074207468617420492068617665202343524C46236265656E206F66666572656420612063686F696365206F662343524C462363757272656E6369657320696E636C7564696E67207468652343524C46236D65726368616E742773206C6F63616C2343524C462363757272656E63792E2343524C462349206163636570742074686520636F6E76657273696F6E2343524C46237261746520616E642066696E616C20616D6F756E742343524C4623616E642074686174207468652073656C65637465642343524C46237472616E73616374696F6E2063757272656E63792069732343524C46232349434343232E2343524C462344434320536572766963652069732343524C46236F66666572656420627920746865206D65726368616E742343524C4623696E636C7564696E672061206D61726B2D75702343524C46236F6E207265666572656E63652072617465206F663A2343524C4623234443434D23252343524C4623234D555445232343524C46232343524C46234920616363657074207468652061626F76652343524C4623636F6E646974696F6E732343524C46232343524C46235945533A205B585D20204E4F3A205B205DFB3ADF010103DF07028600DF020100DF030100DF0406000099999999DF0506000000000000DF06060000000050019F660436E04000DF4C04A0700000FB37DF010103DF07021900DF020100DF030100DF0406000099999999DF0506000000000000DF06060000999999999F660430204000DF380120"
 
-  +--+ Byte 1 (9F)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
-
-  |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
-
-  |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  +--+ Byte 2 (06)
-
-  +--+ Byte 3 (07)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
-
-  +--+ Byte 4 (A0)
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
-
   +--+ 9F06 (EMVCO_AID, len=0x07) value="A0000000032010"
 
   +--+ DF60 (POSEIDON_EMV_CARD_ID, len=0x02) value="00A8"
@@ -6018,9 +5200,9 @@
 
     +--+ Byte 1 (23)
 
-    |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
+    |  +--+  Bit 2 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Print product name on the receipt
 
   +--+ DF0C (ZKA_TM_DEFAULT_DDOL, len=0x03) value="9F3704"
 
@@ -6032,9 +5214,9 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Goods
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Services
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Services
 
     +--+ Byte 2 (00)
 
@@ -6050,21 +5232,21 @@
 
     +--+ Byte 1 (DC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
     +--+ Byte 3 (04)
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
     +--+ Byte 4 (F8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -6072,19 +5254,19 @@
 
     +--+ Byte 1 (DC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
     +--+ Byte 3 (00)
 
     +--+ Byte 4 (A8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -6094,19 +5276,19 @@
 
     +--+ Byte 1 (20)
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
     +--+ Byte 2 (F0)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
     +--+ Byte 3 (C8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> SDA
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> SDA
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
   +--+ DF11 (ZKA_TM_TAC_DENIAL, len=0x05) value="0010000000"
 
@@ -6114,7 +5296,7 @@
 
     +--+ Byte 2 (10)
 
-    |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Requested service not allowed
+    |  +--+  Bit 5 (Mask 0x10, value 0x10) --> Requested service not allowed
 
   +--+ DF22 (ZKA_TM_TRANSACTION_RESTRICTIONS, len=0x08) value="2123110001000000"
 
@@ -6140,11 +5322,11 @@
 
       +--+ Byte 1 (86)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> initial reservation
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> initial reservation
 
-      |  +--+  Bit 0 (Mask 0x02, value 0x02) --> reservation increase
+      |  +--+  Bit 2 (Mask 0x02, value 0x02) --> reservation increase
 
     +--+ DF02 (ZKA_TM_ERROR_IDENTIFICATION, len=0x01) value="00"
 
@@ -6184,48 +5366,6 @@
 
 +--+ E2 (ZKA_TM_APPLICATION_CONFIG_DATA_TEMPLATE, len=0x341) value="9F0607A0000000031010DF60020003DF0A0456495341DF0B0101F00D9F060AA0000003591010028001F805DF06020003DF2A0123DF0C039F37049F0902008C9F15027011DF280260009F5301529F4E2842535061796F6E6520476D62482020202020202020202020204672616E6B6675727420616D2044459F160F343535363030343138323030202020DF2606000000000000DF23020000DF1205DC4004F800DF1305DC4000A800DF1903579F08DF270320F0C8DF11050010000000DF22082123110001000000DF250422000000DF35020276DF7F0101FF608201ECDF700101DF6E0101DF6F8201DF4920616363657074207468617420492068617665202343524C46236265656E206F66666572656420612063686F696365206F662343524C462363757272656E6369657320696E636C7564696E67207468652343524C46236D65726368616E742773206C6F63616C2343524C462363757272656E637920616E64207468617420746869732343524C462363686F6963652069732066696E616C2E20492343524C46236163636570742074686520636F6E76657273696F6E2343524C46237261746520616E642066696E616C20616D6F756E742343524C4623616E642074686174207468652073656C65637465642343524C46237472616E73616374696F6E2063757272656E63792069732343524C46232349434343232E2343524C462344434320536572766963652069732343524C46236F66666572656420627920746865206D65726368616E742343524C4623696E636C7564696E672061206D61726B2D75702343524C46236F6E207265666572656E63652072617465206F663A2343524C4623234443434D23252343524C4623234D555445232343524C46232343524C46234920616363657074207468652061626F76652343524C4623636F6E646974696F6E732343524C46232343524C46235945533A205B585D20204E4F3A205B205DFB3EDF010103DF07028600DF080101DF0606000000005001DF020100DF030100DF0406999999999999DF05060000000000009F660436E04000DF4C04A0700000FB37DF010103DF07021900DF020100DF030100DF0406000099999999DF0506000000000000DF06060000999999999F660430204000DF380120"
 
-  +--+ Byte 1 (9F)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
-
-  |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
-
-  |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  +--+ Byte 2 (06)
-
-  +--+ Byte 3 (07)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
-
-  +--+ Byte 4 (A0)
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
-
   +--+ 9F06 (EMVCO_AID, len=0x07) value="A0000000031010"
 
   +--+ DF60 (POSEIDON_EMV_CARD_ID, len=0x02) value="0003"
@@ -6246,9 +5386,9 @@
 
     +--+ Byte 1 (23)
 
-    |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
+    |  +--+  Bit 2 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Print product name on the receipt
 
   +--+ DF0C (ZKA_TM_DEFAULT_DDOL, len=0x03) value="9F3704"
 
@@ -6260,9 +5400,9 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Goods
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Services
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Services
 
     +--+ Byte 2 (00)
 
@@ -6280,21 +5420,21 @@
 
     +--+ Byte 1 (DC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
     +--+ Byte 3 (04)
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
     +--+ Byte 4 (F8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -6302,19 +5442,19 @@
 
     +--+ Byte 1 (DC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
     +--+ Byte 3 (00)
 
     +--+ Byte 4 (A8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -6324,19 +5464,19 @@
 
     +--+ Byte 1 (20)
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
     +--+ Byte 2 (F0)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
     +--+ Byte 3 (C8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> SDA
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> SDA
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
   +--+ DF11 (ZKA_TM_TAC_DENIAL, len=0x05) value="0010000000"
 
@@ -6344,7 +5484,7 @@
 
     +--+ Byte 2 (10)
 
-    |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Requested service not allowed
+    |  +--+  Bit 5 (Mask 0x10, value 0x10) --> Requested service not allowed
 
   +--+ DF22 (ZKA_TM_TRANSACTION_RESTRICTIONS, len=0x08) value="2123110001000000"
 
@@ -6370,11 +5510,11 @@
 
       +--+ Byte 1 (86)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> initial reservation
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> initial reservation
 
-      |  +--+  Bit 0 (Mask 0x02, value 0x02) --> reservation increase
+      |  +--+  Bit 2 (Mask 0x02, value 0x02) --> reservation increase
 
     +--+ DF08 (ZKA_TM_EXTENDED_SELECTION_SUPPORT_FLAG, len=0x01) value="01"
 
@@ -6416,48 +5556,6 @@
 
 +--+ E2 (ZKA_TM_APPLICATION_CONFIG_DATA_TEMPLATE, len=0x22B) value="DF06020003DF60020003DF0A0456495341DF1406000000000000DF150F343535363030343138323030202020DF460102DF180101DF2703C020C8DF22082121110000000000DF28026000DF2A0163DF250422000000FF608201C9DF700101DF6E0101DF6F8201BC4920616363657074207468617420492068617665202343524C46236265656E206F66666572656420612063686F696365206F662343524C462363757272656E6369657320696E636C7564696E67207468652343524C46236D65726368616E742773206C6F63616C2343524C462363757272656E63792E2343524C462349206163636570742074686520636F6E76657273696F6E2343524C46237261746520616E642066696E616C20616D6F756E742343524C4623616E642074686174207468652073656C65637465642343524C46237472616E73616374696F6E2063757272656E63792069732343524C46232349434343232E2343524C462344434320536572766963652069732343524C46236F66666572656420627920746865206D65726368616E742343524C4623696E636C7564696E672061206D61726B2D75702343524C46236F6E207265666572656E63652072617465206F663A2343524C4623234443434D23252343524C4623234D555445232343524C46232343524C46234920616363657074207468652061626F76652343524C4623636F6E646974696F6E732343524C46232343524C46235945533A205B585D20204E4F3A205B205DF106F904DF2C014F"
 
-  +--+ Byte 1 (DF)
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Don't evaluate the PAN
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
-
-  |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
-
-  |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  +--+ Byte 2 (06)
-
-  +--+ Byte 3 (02)
-
-  +--+ Byte 4 (00)
-
   +--+ DF06 (ZKA_TM_MID, len=0x02) value="0003"
 
   +--+ DF60 (POSEIDON_EMV_CARD_ID, len=0x02) value="0003"
@@ -6474,25 +5572,25 @@
 
     +--+ Byte 1 (01)
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Fallback allowed, denied if application or chip blocked
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Fallback allowed, denied if application or chip blocked
 
   +--+ DF27 (ZKA_TM_RESTRICTED_TERMINAL_CAPABILITIES, len=0x03) value="C020C8"
 
     +--+ Byte 1 (C0)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Manual key entry
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Magnetic stripe
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Magnetic stripe
 
     +--+ Byte 2 (20)
 
     +--+ Byte 3 (C8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> SDA
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> SDA
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
   +--+ DF22 (ZKA_TM_TRANSACTION_RESTRICTIONS, len=0x08) value="2121110000000000"
 
@@ -6500,9 +5598,9 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Goods
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Services
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Services
 
     +--+ Byte 2 (00)
 
@@ -6510,11 +5608,11 @@
 
     +--+ Byte 1 (63)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Don't evaluate the PAN
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Don't evaluate the PAN
 
-    |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
+    |  +--+  Bit 2 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Print product name on the receipt
 
   +--+ DF25 (ZKA_TM_TICKET_PARAMETER, len=0x04) value="22000000"
 
@@ -6534,48 +5632,6 @@
 
 +--+ E2 (ZKA_TM_APPLICATION_CONFIG_DATA_TEMPLATE, len=0x319) value="9F0607A0000000032020DF6002009EDF0A0456504159DF0B0101F0179F060AA00000035910100280019F0607A0000000031010DF2A0123DF0C039F37049F0902008C9F15027011DF280260009F4E2842535061796F6E6520476D62482020202020202020202020204672616E6B6675727420616D2044459F160F343535363030343138323030202020DF2606000000000000DF23020000DF1205DC4004F800DF1305DC4000A800DF270320D0C8DF11050410000000DF22082123110001000000DF1903579F08DF250422000000DF35020276DF7F0101FF608201C9DF700101DF6E0101DF6F8201BC4920616363657074207468617420492068617665202343524C46236265656E206F66666572656420612063686F696365206F662343524C462363757272656E6369657320696E636C7564696E67207468652343524C46236D65726368616E742773206C6F63616C2343524C462363757272656E63792E2343524C462349206163636570742074686520636F6E76657273696F6E2343524C46237261746520616E642066696E616C20616D6F756E742343524C4623616E642074686174207468652073656C65637465642343524C46237472616E73616374696F6E2063757272656E63792069732343524C46232349434343232E2343524C462344434320536572766963652069732343524C46236F66666572656420627920746865206D65726368616E742343524C4623696E636C7564696E672061206D61726B2D75702343524C46236F6E207265666572656E63652072617465206F663A2343524C4623234443434D23252343524C4623234D555445232343524C46232343524C46234920616363657074207468652061626F76652343524C4623636F6E646974696F6E732343524C46232343524C46235945533A205B585D20204E4F3A205B205DFB3ADF010103DF07028600DF0606000000005001DF020100DF030100DF0406000099999999DF05060000000000009F660436E04000DF4C04A0700000FB37DF010103DF07021900DF020100DF030100DF0406000099999999DF0506000000000000DF06060000999999999F660430204000DF380120"
 
-  +--+ Byte 1 (9F)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Hint: bit is not set, PAN evaluation is required!
-
-  |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
-
-  |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Manual key entry
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
-
-  |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Card on exception list
-
-  |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
-
-  +--+ Byte 2 (06)
-
-  +--+ Byte 3 (07)
-
-  |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
-
-  +--+ Byte 4 (A0)
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
-
-  |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
-
-  |  +--+  Bit 0 (Mask 0x20, value 0x20) --> UCOL exceeded
-
   +--+ 9F06 (EMVCO_AID, len=0x07) value="A0000000032020"
 
   +--+ DF60 (POSEIDON_EMV_CARD_ID, len=0x02) value="009E"
@@ -6594,9 +5650,9 @@
 
     +--+ Byte 1 (23)
 
-    |  +--+  Bit 0 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
+    |  +--+  Bit 2 (Mask 0x02, value 0x02) --> Show product name during PIN dialogue
 
-    |  +--+  Bit 0 (Mask 0x01, value 0x01) --> Print product name on the receipt
+    |  +--+  Bit 1 (Mask 0x01, value 0x01) --> Print product name on the receipt
 
   +--+ DF0C (ZKA_TM_DEFAULT_DDOL, len=0x03) value="9F3704"
 
@@ -6608,9 +5664,9 @@
 
     +--+ Byte 1 (60)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Goods
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Goods
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> Services
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> Services
 
     +--+ Byte 2 (00)
 
@@ -6626,21 +5682,21 @@
 
     +--+ Byte 1 (DC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
     +--+ Byte 3 (04)
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> Online PIN entered
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> Online PIN entered
 
     +--+ Byte 4 (F8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -6648,19 +5704,19 @@
 
     +--+ Byte 1 (DC)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Offl. DA not performed
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Offl. DA not performed
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> SDA failed
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> SDA failed
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> DDA failed
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> DDA failed
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
     +--+ Byte 3 (00)
 
     +--+ Byte 4 (A8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> Floor limit exceeded
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> Floor limit exceeded
 
     +--+ Byte 5 (00)
 
@@ -6668,29 +5724,29 @@
 
     +--+ Byte 1 (20)
 
-    |  +--+  Bit 0 (Mask 0x20, value 0x20) --> IC with contacts
+    |  +--+  Bit 6 (Mask 0x20, value 0x20) --> IC with contacts
 
     +--+ Byte 2 (D0)
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> Enciphered PIN for online verification
 
     +--+ Byte 3 (C8)
 
-    |  +--+  Bit 0 (Mask 0x80, value 0x80) --> SDA
+    |  +--+  Bit 8 (Mask 0x80, value 0x80) --> SDA
 
-    |  +--+  Bit 0 (Mask 0x40, value 0x40) --> DDA
+    |  +--+  Bit 7 (Mask 0x40, value 0x40) --> DDA
 
-    |  +--+  Bit 0 (Mask 0x08, value 0x08) --> CDA
+    |  +--+  Bit 4 (Mask 0x08, value 0x08) --> CDA
 
   +--+ DF11 (ZKA_TM_TAC_DENIAL, len=0x05) value="0410000000"
 
     +--+ Byte 1 (04)
 
-    |  +--+  Bit 0 (Mask 0x04, value 0x04) --> CDA failed
+    |  +--+  Bit 3 (Mask 0x04, value 0x04) --> CDA failed
 
     +--+ Byte 2 (10)
 
-    |  +--+  Bit 0 (Mask 0x10, value 0x10) --> Requested service not allowed
+    |  +--+  Bit 5 (Mask 0x10, value 0x10) --> Requested service not allowed
 
   +--+ DF22 (ZKA_TM_TRANSACTION_RESTRICTIONS, len=0x08) value="2123110001000000"
 
@@ -6718,11 +5774,11 @@
 
       +--+ Byte 1 (86)
 
-      |  +--+  Bit 0 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
+      |  +--+  Bit 8 (Mask 0x80, value 0x80) --> payment without cashback (including tip and tipable)
 
-      |  +--+  Bit 0 (Mask 0x04, value 0x04) --> initial reservation
+      |  +--+  Bit 3 (Mask 0x04, value 0x04) --> initial reservation
 
-      |  +--+  Bit 0 (Mask 0x02, value 0x02) --> reservation increase
+      |  +--+  Bit 2 (Mask 0x02, value 0x02) --> reservation increase
 
     +--+ DF06 (ZKA_TM_MID, len=0x06) value="000000005001"
 

@@ -23,6 +23,10 @@ def decode_dictionary_bitmask(node):
     if not value_hex:
         return None
     
+    # Only decode primitive (leaf) nodes, not constructed templates
+    if node.get("is_constructed", False):
+        return None
+    
     metadata = Dictionary.lookup_by_tag(tag)
     if not metadata:
         return None
@@ -32,6 +36,11 @@ def decode_dictionary_bitmask(node):
         return None
     
     value_bytes = bytes.fromhex(value_hex)
+    
+    # Skip if value doesn't match expected byte count
+    if len(value_bytes) > len(bytes_defs) + 2:
+        return None
+    
     results = []
     
     for byte_def in bytes_defs:
@@ -43,9 +52,10 @@ def decode_dictionary_bitmask(node):
         
         for bit_def in byte_def.get("bits", []):
             if "multi_bit" in bit_def and bit_def["multi_bit"]:
-                # Multi-bit field: just show as set if any bit in the field is set
+                # Multi-bit field: show as set if any bit in the field is set
                 results.append({
                     "byte": byte_index,
+                    "bit": 0,
                     "mask": 0x00,
                     "name": bit_def.get("label", ""),
                     "set": byte_value != 0,
@@ -55,6 +65,7 @@ def decode_dictionary_bitmask(node):
                 mask = 1 << (bit - 1) if bit > 0 else 0
                 results.append({
                     "byte": byte_index,
+                    "bit": bit,
                     "mask": mask,
                     "name": bit_def.get("label", ""),
                     "set": bool(byte_value & mask),
