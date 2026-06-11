@@ -274,7 +274,7 @@ class TestBitmaskDecoder:
     def test_tac_default(self):
         """Decode TAC Default."""
         value = bytes([0xF8, 0x00, 0x00, 0x00, 0x00])
-        result = BitmaskDecoder.decode_bitmask("DF11", value)
+        result = BitmaskDecoder.decode_bitmask("DF13", value)
         assert len(result) > 0
         bit = next(b for b in result if b["byte"] == 0 and b["mask"] == 0x80)
         assert bit["set"] is True
@@ -282,14 +282,14 @@ class TestBitmaskDecoder:
     def test_tac_denial(self):
         """Decode TAC Denial."""
         value = bytes([0x00, 0x00, 0x00, 0x00, 0x00])
-        result = BitmaskDecoder.decode_bitmask("DF12", value)
+        result = BitmaskDecoder.decode_bitmask("DF11", value)
         assert len(result) > 0
         assert all(b["set"] is False for b in result)
 
     def test_tac_online(self):
         """Decode TAC Online."""
         value = bytes([0xFF, 0xFF, 0xFF, 0xFF, 0xFF])
-        result = BitmaskDecoder.decode_bitmask("DF13", value)
+        result = BitmaskDecoder.decode_bitmask("DF12", value)
         assert len(result) > 0
         assert all(b["set"] for b in result)
 
@@ -312,3 +312,15 @@ class TestBitmaskDecoder:
         assert defs is not None
         assert len(defs) == 5
         assert BitmaskDecoder.get_definition("9999") is None
+
+    def test_dynamic_dictionary_bitmask(self):
+        """Decode bitmask dynamically from dictionary metadata."""
+        # DF07: ZKA_TM_SUPPORTED_TRANSACTION_TYPES
+        # Byte 1: bit 8 is "payment without cashback"
+        value = bytes([0x80, 0x00])
+        result = BitmaskDecoder.decode_bitmask("DF07", value)
+        assert len(result) > 0
+        bit = next(b for b in result if b["byte"] == 0 and b["bit"] == 8)
+        assert bit["name"] == "payment without cashback (including tip and tipable)"
+        assert bit["mask"] == 0x80
+        assert bit["set"] is True

@@ -9,6 +9,7 @@ Decodes tags where each bit represents a specific flag or option:
 
 Returns list of {byte, mask, name, set} dicts.
 """
+from emv_tlv.dictionaries import Dictionary
 
 # TVR (Terminal Verification Results) - Tag 95, 5 bytes
 _TVR_BITS = [
@@ -212,8 +213,44 @@ class BitmaskDecoder:
             value: Raw value bytes
 
         Returns:
-            List of {byte, mask, name, set} dicts
+            List of {byte, bit, mask, name, set} dicts
         """
+        # Try to decode using the dictionary metadata bytes definitions first
+        metadata = Dictionary.lookup_by_tag(tag)
+        if metadata:
+            bytes_defs = metadata.get("bytes")
+            if bytes_defs:
+                results = []
+                for byte_def in bytes_defs:
+                    byte_index = byte_def.get("index", 1) - 1  # 1-based to 0-based
+                    if byte_index >= len(value):
+                        continue
+                    
+                    byte_value = value[byte_index]
+                    
+                    for bit_def in byte_def.get("bits", []):
+                        if "multi_bit" in bit_def and bit_def["multi_bit"]:
+                            results.append({
+                                "byte": byte_index,
+                                "bit": 0,
+                                "mask": 0x00,
+                                "name": bit_def.get("label", ""),
+                                "set": byte_value != 0,
+                            })
+                        else:
+                            bit = bit_def.get("bit", 0)
+                            mask = 1 << (bit - 1) if bit > 0 else 0
+                            results.append({
+                                "byte": byte_index,
+                                "bit": bit,
+                                "mask": mask,
+                                "name": bit_def.get("label", ""),
+                                "set": bool(byte_value & mask),
+                            })
+                if results:
+                    return results
+
+        # Fallback to hardcoded definitions if no dictionary definitions exist
         definitions = _BITMASK_DEFINITIONS.get(tag)
         if not definitions:
             return []
@@ -224,11 +261,15 @@ class BitmaskDecoder:
             byte_value = value[byte_index] if byte_index < len(value) else 0
 
             for bit_def in byte_bits:
+                mask = bit_def["mask"]
+                # Calculate bit number from mask (e.g. 0x80 -> bit 8)
+                bit = mask.bit_length() if mask > 0 else 0
                 results.append({
                     "byte": byte_index,
-                    "mask": bit_def["mask"],
+                    "bit": bit,
+                    "mask": mask,
                     "name": bit_def["name"],
-                    "set": bool(byte_value & bit_def["mask"]),
+                    "set": bool(byte_value & mask),
                 })
 
         return results
