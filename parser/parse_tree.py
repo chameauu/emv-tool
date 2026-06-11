@@ -6,7 +6,7 @@ Reads hex data from test.txt, parses it as EMV TLV,
 and generates a detailed tree hierarchy output file.
 """
 
-from emv_tlv import parse, Dictionary
+from emv_tlv import parse
 from emv_tlv.decoders.bitmask_decoder import BitmaskDecoder
 
 
