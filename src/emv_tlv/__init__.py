@@ -15,6 +15,7 @@ from emv_tlv.decoders.bitmask_decoder import BitmaskDecoder
 from emv_tlv.adapters.zvt_adapter import ZVTAdapter
 from emv_tlv.adapters.config_adapter import ConfigAdapter
 from emv_tlv.dictionaries import Dictionary
+from emv_tlv.validators import validate_hex, ValidationResult, ValidationError
 
 
 class _ConfigResult(list):

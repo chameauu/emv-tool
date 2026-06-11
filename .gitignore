@@ -15,6 +15,7 @@ venv/
 .env/
 
 test
+docs
 
 # uv
 uv.lock
